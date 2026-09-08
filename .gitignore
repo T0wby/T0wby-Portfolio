@@ -396,3 +396,8 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Impeccable transient build evidence (screenshots, session logs)
+.impeccable/review/
+.impeccable/questions/
+.impeccable/live/

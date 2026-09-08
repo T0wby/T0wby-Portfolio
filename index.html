@@ -18,6 +18,22 @@
   <link rel="stylesheet" href="css/style-switcher.css">
 </head>
 <body>
+  <!--
+  THESIS: Every project is documented on the identical spec sheet, so industrial .NET work and
+  real-time engine work are read in one format. Refuses the project-card grid, where each tile is
+  free to say as much or as little as it likes.
+  OWN-WORLD: A DIN 6771 drawing set. Sheet ground, ink rules at one single 1.5px weight everywhere,
+  tabular figures, title blocks as labelled cell grids, authored line diagrams at that same weight.
+  Solid frame edge = source published; dashed edge = under NDA, interior only. The skin accent is
+  the live signal and nothing else.
+  STORY: A hiring manager reads nine dated sheets in which professional and engine work interleave,
+  opens two, and leaves with a CV.
+  FIRST VIEWPORT: No hero. Set title block across the top with legend and stack filters, then the
+  register on a year axis, the 2024-to-present band first and marked live.
+  FORM: The Datasheet, candidate 1 of the grounded list, seed key 3490a11a.
+  FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the
+  verdict, DESIGN.md, and every shipping raster carrying its provenance.
+  -->
   <!-- ===== Main Container Start ===== -->
   <div class="main-container">
     <!-- ===== Aside Start ===== -->
@@ -111,28 +127,28 @@
                 <div class="skills padd-15">
                   <div class="row">
                     <div class="skill-item padd-15">
-                      <h5>C# / .NET</h5>
+                      <h4>C# / .NET</h4>
                       <div class="progress">
                         <div class="progress-in" style="width: 85%;"></div>
                         <div class="skill-percent">85%</div>
                       </div>
                     </div>
                     <div class="skill-item padd-15">
-                      <h5>WPF / MVVM</h5>
+                      <h4>WPF / MVVM</h4>
                       <div class="progress">
                         <div class="progress-in" style="width: 80%;"></div>
                         <div class="skill-percent">80%</div>
                       </div>
                     </div>
                     <div class="skill-item padd-15">
-                      <h5>Blazor / Web UI</h5>
+                      <h4>Blazor / Web UI</h4>
                       <div class="progress">
                         <div class="progress-in" style="width: 60%;"></div>
                         <div class="skill-percent">60%</div>
                       </div>
                     </div>
                     <div class="skill-item padd-15">
-                      <h5>Unity / C++</h5>
+                      <h4>Unity / C++</h4>
                       <div class="progress">
                         <div class="progress-in" style="width: 55%;"></div>
                         <div class="skill-percent">55%</div>
@@ -241,85 +257,6 @@
         </div>
       </section>
       <!-- ===== About Section End ===== -->
-      <!-- ===== Services Section Start ===== -->
-      <!--<section class="service section" id="services">
-        <div class="container">
-          <div class="row">
-            <div class="section-title padd-15">
-              <h2>Services</h2>
-            </div>
-          </div>
-          <div class="row">-->
-            <!-- ===== Service item Start ====== -->
-            <!--<div class="service-item padd-15">
-              <div class="service-item-inner">
-                <div class="icon">
-                  <i class="fa fa-mobile-alt"></i>
-                </div>
-                <h4>Web Design</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil velit ab itaque.</p>
-              </div>
-            </div>-->
-            <!-- ===== Service item End ====== -->
-             <!-- ===== Service item Start ====== -->
-             <!--<div class="service-item padd-15">
-              <div class="service-item-inner">
-                <div class="icon">
-                  <i class="fa fa-laptop-code"></i>
-                </div>
-                <h4>Web Design</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil velit ab itaque.</p>
-              </div>
-            </div>-->
-            <!-- ===== Service item End ====== -->
-             <!-- ===== Service item Start ====== -->
-             <!--<div class="service-item padd-15">
-              <div class="service-item-inner">
-                <div class="icon">
-                  <i class="fa fa-palette"></i>
-                </div>
-                <h4>Web Design</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil velit ab itaque.</p>
-              </div>
-            </div>-->
-            <!-- ===== Service item End ====== -->
-             <!-- ===== Service item Start ====== -->
-             <!--<div class="service-item padd-15">
-              <div class="service-item-inner">
-                <div class="icon">
-                  <i class="fa fa-code"></i>
-                </div>
-                <h4>Web Design</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil velit ab itaque.</p>
-              </div>
-            </div>-->
-            <!-- ===== Service item End ====== -->
-             <!-- ===== Service item Start ====== -->
-             <!--<div class="service-item padd-15">
-              <div class="service-item-inner">
-                <div class="icon">
-                  <i class="fa fa-search"></i>
-                </div>
-                <h4>Web Design</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil velit ab itaque.</p>
-              </div>
-            </div>-->
-            <!-- ===== Service item End ====== -->
-             <!-- ===== Service item Start ====== -->
-             <!--<div class="service-item padd-15">
-              <div class="service-item-inner">
-                <div class="icon">
-                  <i class="fa fa-bullhorn"></i>
-                </div>
-                <h4>Web Design</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil velit ab itaque.</p>
-              </div>
-            </div>-->
-            <!-- ===== Service item End ====== -->
-          <!--</div>
-        </div>
-      </section>-->
-      <!-- ===== Services Section End ===== -->
       <!-- ===== Portfolio Section Start ===== -->
       <section class="portfolio section" id="portfolio">
         <div class="container">
@@ -329,147 +266,470 @@
             </div>
           </div>
           <div class="row">
-            <div class="portfolio-heading padd-15">
-              <h2>My Last Projects :</h2>
+            <div class="ds padd-15">
+
+              <!-- ===== sheet frame: set block is its header ===== -->
+              <div class="ds-frame">
+              <div class="ds-set">
+                <div class="ds-set-grid">
+                  <dl class="ds-cell">
+                    <dt>Drawing set</dt>
+                    <dd>Selected work<small>Tobias N&uuml;hlen</small></dd>
+                  </dl>
+                  <dl class="ds-cell">
+                    <dt>Sheets</dt>
+                    <dd>09<small>professional and engine, one register</small></dd>
+                  </dl>
+                  <dl class="ds-cell">
+                    <dt>Period</dt>
+                    <dd>2022 &ndash; present<small>ordered newest first</small></dd>
+                  </dl>
+                  <dl class="ds-cell">
+                    <dt>Discipline</dt>
+                    <dd>Interface layer<small>industrial .NET and real&#8209;time engines</small></dd>
+                  </dl>
+                </div>
+                <div class="ds-bar">
+                  <p class="ds-legend">
+                    <span>Source published</span>
+                    <span class="is-hidden-edge">Interior only</span>
+                  </p>
+                  <div class="ds-filters" role="group" aria-label="Filter sheets by stack">
+                    <button type="button" class="ds-filter" data-filter="all" aria-pressed="true">All</button>
+                    <button type="button" class="ds-filter" data-filter="csharp" aria-pressed="false">C# / .NET</button>
+                    <button type="button" class="ds-filter" data-filter="blazor" aria-pressed="false">Blazor</button>
+                    <button type="button" class="ds-filter" data-filter="wpf" aria-pressed="false">WPF / UWP</button>
+                    <button type="button" class="ds-filter" data-filter="engine" aria-pressed="false">Game engine</button>
+                    <button type="button" class="ds-filter" data-filter="cpp" aria-pressed="false">C++ / Vulkan</button>
+                  </div>
+                  <p class="ds-count" role="status">9 of 9 sheets</p>
+                </div>
+              </div>
+
+              <!-- ===== register ===== -->
+              <div class="ds-axis">
+              <p class="ds-band"><b>2024</b><i></i></p>
+              <ol class="ds-register">
+
+                <!-- sheet 01 -->
+                <li class="ds-sheet" data-source="nda" data-stack="csharp blazor">
+                  <button type="button" class="ds-row" aria-expanded="false" aria-controls="sheet-01">
+                    <span class="ds-no">01</span>
+                    <span class="ds-desig">Porting a grown UWP application to Blazor<small>werusys Industrieinformatik &middot; 09.2024 &ndash; present <span class="ds-current">Current</span></small></span>
+                    <span class="ds-stack">C# &middot; Blazor &middot; .NET</span>
+                    <span class="ds-mark" aria-hidden="true"></span>
+                  </button>
+                  <div class="ds-body" id="sheet-01"><div>
+                    <div class="ds-sheet-inner">
+                      <div class="ds-draw">
+                        <div class="ds-dwgbox" tabindex="0" role="region" aria-label="Schematic, scrolls sideways"><svg class="ds-dwg" viewBox="0 0 700 300" role="img" aria-labelledby="dwg01t dwg01d">
+                          <title id="dwg01t">Component decomposition of a UWP application into a Blazor component set</title>
+                          <desc id="dwg01d">A single grown UWP application on the left is decomposed into a shared stack of reusable components, which is then rendered by three targets of different widths: phone, tablet and desktop.</desc>
+                          <rect x="16" y="52" width="150" height="186" stroke="currentColor"/>
+                          <path d="M16 108h150M16 152h150M16 196h150M92 52v186" stroke="currentColor" class="dash"/>
+                          <text x="16" y="42" class="lbl">Grown UWP application</text>
+                          <path d="M186 145h74" stroke="currentColor" class="sig"/>
+                          <path d="M252 138l10 7-10 7" stroke="currentColor" class="sig"/>
+                          <text x="186" y="132" class="lbl">Decompose</text>
+                          <rect x="278" y="76" width="118" height="28" stroke="currentColor"/>
+                          <rect x="278" y="112" width="118" height="28" stroke="currentColor"/>
+                          <rect x="278" y="148" width="118" height="28" stroke="currentColor"/>
+                          <rect x="278" y="184" width="118" height="28" stroke="currentColor"/>
+                          <text x="278" y="66" class="lbl">Shared components</text>
+                          <path d="M416 90h44v104h-44M416 145h44" stroke="currentColor"/>
+                          <rect x="482" y="176" width="34" height="62" stroke="currentColor"/>
+                          <rect x="530" y="140" width="46" height="98" stroke="currentColor"/>
+                          <rect x="590" y="96" width="34" height="142" stroke="currentColor"/>
+                          <path d="M482 238h142" stroke="currentColor"/>
+                          <text x="482" y="166" class="lbl">Phone</text>
+                          <text x="530" y="130" class="lbl">Tablet</text>
+                          <text x="590" y="86" class="lbl">Desktop</text>
+                          <text x="482" y="262" class="lbl">One interface, three widths</text>
+                        </svg></div>
+                        <p class="ds-scrollnote">Drawing scrolls sideways</p>
+                        <p class="ds-caption">Schematic. The employer&rsquo;s product interface is not shown; this sheet documents the structure of the work, not the screen.</p>
+                      </div>
+                      <div class="ds-block">
+                        <dl class="ds-shows"><dt>Shows</dt><dd>Breaking a grown application into reusable components, and designing one interface that has to hold up on phone, tablet and desktop.</dd></dl>
+                        <dl><dt>Role</dt><dd>Owns the UI side of the port</dd></dl>
+                        <dl><dt>Period</dt><dd>09.2024 &ndash; present</dd></dl>
+                        <dl><dt>Stack</dt><dd>C#, .NET, Blazor, XAML, MVVM</dd></dl>
+                        <dl><dt>Source</dt><dd>Under NDA &mdash; architecture only</dd></dl>
+                      </div>
+                    </div>
+                  </div></div>
+                </li>
+
+                <!-- sheet 02 -->
+                <li class="ds-sheet" data-source="nda" data-stack="csharp wpf">
+                  <button type="button" class="ds-row" aria-expanded="false" aria-controls="sheet-02">
+                    <span class="ds-no">02</span>
+                    <span class="ds-desig">Interface layer of industrial line&#8209;of&#8209;business software<small>werusys Industrieinformatik &middot; 09.2024 &ndash; present <span class="ds-current">Current</span></small></span>
+                    <span class="ds-stack">WPF &middot; UWP &middot; XAML &middot; MVVM</span>
+                    <span class="ds-mark" aria-hidden="true"></span>
+                  </button>
+                  <div class="ds-body" id="sheet-02"><div>
+                    <div class="ds-sheet-inner">
+                      <div class="ds-draw">
+                        <div class="ds-dwgbox" tabindex="0" role="region" aria-label="Schematic, scrolls sideways"><svg class="ds-dwg" viewBox="0 0 640 290" role="img" aria-labelledby="dwg02t dwg02d">
+                          <title id="dwg02t">MVVM structure with data access through Entity Framework Core</title>
+                          <desc id="dwg02d">A XAML view is bound two-way to a view model, which holds the model. The model reads and writes through Entity Framework Core to a Microsoft SQL Server database.</desc>
+                          <rect x="16" y="60" width="150" height="76" stroke="currentColor"/>
+                          <text x="26" y="94" >View</text>
+                          <text x="26" y="112" class="lbl">XAML</text>
+                          <rect x="245" y="60" width="150" height="76" stroke="currentColor"/>
+                          <text x="255" y="94">View model</text>
+                          <text x="255" y="112" class="lbl">State + commands</text>
+                          <rect x="474" y="60" width="150" height="76" stroke="currentColor"/>
+                          <text x="484" y="94">Model</text>
+                          <text x="484" y="112" class="lbl">Domain</text>
+                          <path d="M166 86h68" stroke="currentColor" class="sig"/>
+                          <path d="M226 79l10 7-10 7" stroke="currentColor" class="sig"/>
+                          <path d="M234 116h-68" stroke="currentColor" class="sig"/>
+                          <path d="M174 109l-10 7 10 7" stroke="currentColor" class="sig"/>
+                          <text x="172" y="72" class="lbl">Commands</text>
+                          <text x="172" y="140" class="lbl">Binding</text>
+                          <path d="M395 98h68" stroke="currentColor"/>
+                          <path d="M455 91l10 7-10 7" stroke="currentColor"/>
+                          <path d="M549 136v40" stroke="currentColor"/>
+                          <path d="M542 168l7 10 7-10" stroke="currentColor"/>
+                          <text x="560" y="164" class="lbl">EF Core</text>
+                          <path d="M499 196c0-7 22-13 50-13s50 6 50 13-22 13-50 13-50-6-50-13z" stroke="currentColor"/>
+                          <path d="M499 196v42c0 7 22 13 50 13s50-6 50-13v-42" stroke="currentColor"/>
+                          <text x="499" y="278" class="lbl">SQL Server</text>
+                        </svg></div>
+                        <p class="ds-scrollnote">Drawing scrolls sideways</p>
+                        <p class="ds-caption">Schematic. The employer&rsquo;s product interface is not shown; this sheet documents the structure of the work, not the screen.</p>
+                      </div>
+                      <div class="ds-block">
+                        <dl class="ds-shows"><dt>Shows</dt><dd>The UI layer of industrial desktop software built to hold a domain that keeps growing &mdash; and the data path underneath it.</dd></dl>
+                        <dl><dt>Role</dt><dd>Software Developer, UI</dd></dl>
+                        <dl><dt>Period</dt><dd>09.2024 &ndash; present</dd></dl>
+                        <dl><dt>Stack</dt><dd>C#, .NET, WPF, UWP, XAML, MVVM, EF Core, MS SQL Server</dd></dl>
+                        <dl><dt>Source</dt><dd>Under NDA &mdash; architecture only</dd></dl>
+                      </div>
+                    </div>
+                  </div></div>
+                </li>
+
+                <!-- sheet 03 -->
+                <li class="ds-sheet" data-source="nda" data-stack="csharp">
+                  <button type="button" class="ds-row" aria-expanded="false" aria-controls="sheet-03">
+                    <span class="ds-no">03</span>
+                    <span class="ds-desig">Cross&#8209;platform desktop application in Avalonia<small>MSA GmbH, C# traineeship &middot; 07.2024 &ndash; 08.2024</small></span>
+                    <span class="ds-stack">C# &middot; Avalonia &middot; MVVM</span>
+                    <span class="ds-mark" aria-hidden="true"></span>
+                  </button>
+                  <div class="ds-body" id="sheet-03"><div>
+                    <div class="ds-sheet-inner">
+                      <div class="ds-draw">
+                        <div class="ds-dwgbox" tabindex="0" role="region" aria-label="Schematic, scrolls sideways"><svg class="ds-dwg" viewBox="0 0 640 230" role="img" aria-labelledby="dwg03t dwg03d">
+                          <title id="dwg03t">One MVVM application rendered to three desktop operating systems</title>
+                          <desc id="dwg03d">A single application built on the MVVM pattern targets Windows, macOS and Linux from one codebase.</desc>
+                          <rect x="16" y="76" width="182" height="76" stroke="currentColor"/>
+                          <text x="28" y="110">One codebase</text>
+                          <text x="28" y="128" class="lbl">Avalonia + MVVM</text>
+                          <path d="M198 114h58" stroke="currentColor" class="sig"/>
+                          <path d="M248 107l10 7-10 7" stroke="currentColor" class="sig"/>
+                          <rect x="286" y="34" width="150" height="48" stroke="currentColor"/>
+                          <rect x="286" y="90" width="150" height="48" stroke="currentColor"/>
+                          <rect x="286" y="146" width="150" height="48" stroke="currentColor"/>
+                          <text x="298" y="63" class="lbl">Windows</text>
+                          <text x="298" y="119" class="lbl">macOS</text>
+                          <text x="298" y="175" class="lbl">Linux</text>
+                          <path d="M456 34v160M456 114h34" stroke="currentColor" class="dash"/>
+                          <text x="470" y="106" class="lbl">Stories in Jira</text>
+                          <text x="470" y="134" class="lbl">Docs in Confluence</text>
+                        </svg></div>
+                        <p class="ds-scrollnote">Drawing scrolls sideways</p>
+                        <p class="ds-caption">Schematic. Traineeship work; the product is not shown.</p>
+                      </div>
+                      <div class="ds-block">
+                        <dl class="ds-shows"><dt>Shows</dt><dd>The same MVVM discipline on a cross&#8209;platform toolkit, plus the writing around it &mdash; stories and documentation, not only code.</dd></dl>
+                        <dl><dt>Role</dt><dd>C# Trainee</dd></dl>
+                        <dl><dt>Period</dt><dd>07.2024 &ndash; 08.2024</dd></dl>
+                        <dl><dt>Stack</dt><dd>C#, Avalonia, MVVM, Jira, Confluence</dd></dl>
+                        <dl><dt>Source</dt><dd>Not published</dd></dl>
+                      </div>
+                    </div>
+                  </div></div>
+                </li>
+
+                <!-- sheet 04 -->
+                <li class="ds-sheet" data-source="public" data-stack="engine">
+                  <button type="button" class="ds-row" aria-expanded="false" aria-controls="sheet-04">
+                    <span class="ds-no">04</span>
+                    <span class="ds-desig">Mixed Reality Roguelike Shooter<small>B.Sc. thesis, SAE Institute Cologne &middot; completed 03.2024</small></span>
+                    <span class="ds-stack">Oculus SDK &middot; Mixed reality</span>
+                    <span class="ds-mark" aria-hidden="true"></span>
+                  </button>
+                  <div class="ds-body" id="sheet-04"><div>
+                    <div class="ds-sheet-inner">
+                      <div class="ds-draw">
+                        <div class="ds-dwgbox" tabindex="0" role="region" aria-label="Schematic, scrolls sideways"><svg class="ds-dwg" viewBox="0 0 700 300" role="img" aria-labelledby="dwg04t dwg04d">
+                          <title id="dwg04t">How the mixed reality scene is composed</title>
+                          <desc id="dwg04d">The headset's passthrough view of the real room is combined with room geometry and virtual actors into one composited view presented to the player.</desc>
+                          <rect x="16" y="70" width="170" height="110" stroke="currentColor"/>
+                          <path d="M16 70l170 110M16 180l170-110" stroke="currentColor" class="dash"/>
+                          <text x="16" y="60" class="lbl">Real room</text>
+                          <path d="M196 125h58" stroke="currentColor" class="sig"/>
+                          <path d="M246 118l10 7-10 7" stroke="currentColor" class="sig"/>
+                          <text x="196" y="112" class="lbl">Passthrough</text>
+                          <rect x="272" y="70" width="156" height="110" stroke="currentColor"/>
+                          <text x="286" y="120">Composited</text>
+                          <text x="286" y="140">view</text>
+                          <rect x="514" y="44" width="170" height="52" stroke="currentColor"/>
+                          <text x="526" y="75" class="lbl">Virtual actors</text>
+                          <rect x="514" y="156" width="170" height="52" stroke="currentColor"/>
+                          <text x="526" y="187" class="lbl">Room geometry</text>
+                          <path d="M514 70h-46v35h-30" stroke="currentColor"/>
+                          <path d="M446 98l-10 7 10 7" stroke="currentColor"/>
+                          <path d="M514 182h-46v-35h-30" stroke="currentColor"/>
+                          <path d="M446 140l-10 7 10 7" stroke="currentColor"/>
+                          <path d="M350 180v42" stroke="currentColor" class="sig"/>
+                          <path d="M343 214l7 10 7-10" stroke="currentColor" class="sig"/>
+                          <rect x="272" y="230" width="156" height="46" stroke="currentColor"/>
+                          <text x="286" y="259" class="lbl">Player, in the room</text>
+                        </svg></div>
+                        <p class="ds-scrollnote">Drawing scrolls sideways</p>
+                        <div class="ds-media">
+                          <iframe src="https://www.youtube.com/embed/OwHYrSbE_iY" title="Mixed Reality Roguelike Shooter — thesis showcase video" loading="lazy" allowfullscreen></iframe>
+                        </div>
+                        <div class="ds-media">
+                          <img src="images/portfolio/portfolio-1.png" alt="Playtest frame from the Mixed Reality Roguelike Shooter, showing the in-world heads-up display and a portal effect in a real room." loading="lazy" decoding="async">
+                        </div>
+                      </div>
+                      <div class="ds-block">
+                        <dl class="ds-shows"><dt>Shows</dt><dd>Mixed&#8209;reality interaction built against the Oculus SDK and carried from concept to a finished bachelor&rsquo;s thesis.</dd></dl>
+                        <dl><dt>Role</dt><dd>Sole author</dd></dl>
+                        <dl><dt>Period</dt><dd>Completed 03.2024</dd></dl>
+                        <dl><dt>Stack</dt><dd>Oculus SDK, real&#8209;time 3D</dd></dl>
+                        <dl><dt>Source</dt><dd><a href="https://youtu.be/OwHYrSbE_iY" target="_blank" rel="noopener">Showcase video</a></dd></dl>
+                      </div>
+                    </div>
+                  </div></div>
+                </li>
+              </ol>
+
+              <p class="ds-band"><b>2022</b><i></i></p>
+              <ol class="ds-register" start="5">
+
+                <!-- sheet 05 -->
+                <li class="ds-sheet" data-source="public" data-stack="engine">
+                  <button type="button" class="ds-row" aria-expanded="false" aria-controls="sheet-05">
+                    <span class="ds-no">05</span>
+                    <span class="ds-desig">Genocide for Future<small>SAE Advanced Diploma production &middot; 03.2022 &ndash; 09.2023</small></span>
+                    <span class="ds-stack">Team production &middot; Real&#8209;time 3D</span>
+                    <span class="ds-mark" aria-hidden="true"></span>
+                  </button>
+                  <div class="ds-body" id="sheet-05"><div>
+                    <div class="ds-sheet-inner">
+                      <div class="ds-draw">
+                        <div class="ds-dwgbox" tabindex="0" role="region" aria-label="Schematic, scrolls sideways"><svg class="ds-dwg" viewBox="0 0 700 300" role="img" aria-labelledby="dwg05t dwg05d">
+                          <title id="dwg05t">The production workflow this project ran under, and the lane worked in</title>
+                          <desc id="dwg05d">Design, art and audio, and programming run as parallel lanes into a build, which goes to playtest and loops back into the lanes. Programming is the lane worked in.</desc>
+                          <rect x="16" y="40" width="188" height="44" stroke="currentColor"/>
+                          <text x="30" y="68" class="lbl">Design</text>
+                          <rect x="16" y="104" width="188" height="44" stroke="currentColor"/>
+                          <text x="30" y="132" class="lbl">Art and audio</text>
+                          <rect x="16" y="168" width="188" height="44" stroke="currentColor" class="sig"/>
+                          <text x="30" y="190" class="lbl">Programming</text>
+                          <text x="30" y="204" class="lbl">This lane</text>
+                          <path d="M204 62h58v64M204 126h58M204 190h58v-64" stroke="currentColor"/>
+                          <path d="M262 126h34" stroke="currentColor"/>
+                          <path d="M288 119l10 7-10 7" stroke="currentColor"/>
+                          <rect x="308" y="104" width="150" height="44" stroke="currentColor"/>
+                          <text x="322" y="132" class="lbl">Build</text>
+                          <path d="M458 126h44" stroke="currentColor"/>
+                          <path d="M494 119l10 7-10 7" stroke="currentColor"/>
+                          <rect x="514" y="104" width="170" height="44" stroke="currentColor"/>
+                          <text x="528" y="132" class="lbl">Playtest</text>
+                          <path d="M599 148v128H6V62" stroke="currentColor" class="dash"/>
+                          <path d="M6 62h4M6 126h4M6 190h4" stroke="currentColor" class="dash"/>
+                          <path d="M10 55l6 7-6 7M10 119l6 7-6 7M10 183l6 7-6 7" stroke="currentColor"/>
+                          <text x="230" y="294" class="lbl">Findings return to every lane</text>
+                        </svg></div>
+                        <p class="ds-scrollnote">Drawing scrolls sideways</p>
+                        <div class="ds-media">
+                          <iframe src="https://www.youtube.com/embed/FxFqaCFlKqs" title="Genocide for Future — trailer (German)" loading="lazy" allowfullscreen></iframe>
+                        </div>
+                        <div class="ds-media">
+                          <iframe src="https://www.youtube.com/embed/2r-JfsFNRvY" title="Genocide for Future — gameplay footage" loading="lazy" allowfullscreen></iframe>
+                        </div>
+                        <div class="ds-media ds-media--fit">
+                          <img src="images/portfolio/Genocide_for_Future.png" alt="Key art poster for Genocide for Future." loading="lazy" decoding="async">
+                        </div>
+                        <p class="ds-caption">Trailer is in German. Gameplay footage has no commentary.</p>
+                      </div>
+                      <div class="ds-block">
+                        <dl class="ds-shows"><dt>Shows</dt><dd>Working the programming lane of a multi&#8209;discipline team production &mdash; the project the diploma required, still in development.</dd></dl>
+                        <dl><dt>Role</dt><dd>Programming, in a team</dd></dl>
+                        <dl><dt>Period</dt><dd>03.2022 &ndash; 09.2023, ongoing</dd></dl>
+                        <dl><dt>Stack</dt><dd>Real&#8209;time 3D, team production workflow</dd></dl>
+                        <dl><dt>Source</dt><dd><a href="https://www.youtube.com/@GFFtheGame" target="_blank" rel="noopener">Project channel</a></dd></dl>
+                      </div>
+                    </div>
+                  </div></div>
+                </li>
+
+                <!-- sheet 06 -->
+                <li class="ds-sheet" data-source="public" data-stack="cpp">
+                  <button type="button" class="ds-row" aria-expanded="false" aria-controls="sheet-06">
+                    <span class="ds-no">06</span>
+                    <span class="ds-desig">Vulkan renderer<small>SAE Institute Cologne &middot; 03.2022 &ndash; 09.2023</small></span>
+                    <span class="ds-stack">C++ &middot; Vulkan</span>
+                    <span class="ds-mark" aria-hidden="true"></span>
+                  </button>
+                  <div class="ds-body" id="sheet-06"><div>
+                    <div class="ds-sheet-inner">
+                      <div class="ds-draw">
+                        <div class="ds-dwgbox" tabindex="0" role="region" aria-label="Schematic, scrolls sideways"><svg class="ds-dwg" viewBox="0 0 700 300" role="img" aria-labelledby="dwg06t dwg06d">
+                          <title id="dwg06t">What an engine provides versus what Vulkan makes explicit</title>
+                          <desc id="dwg06d">Stages an engine hands you already configured are the same stages a Vulkan application has to create, describe and synchronise by hand.</desc>
+                          <rect x="16" y="56" width="250" height="200" stroke="currentColor" class="dash"/>
+                          <text x="16" y="46" class="lbl">Inside an engine</text>
+                          <path d="M16 96h250M16 136h250M16 176h250M16 216h250" stroke="currentColor" class="dash"/>
+                          <text x="30" y="152">Provided</text>
+                          <path d="M286 150h68" stroke="currentColor" class="sig"/>
+                          <path d="M346 143l10 7-10 7" stroke="currentColor" class="sig"/>
+                          <text x="286" y="137" class="lbl">One layer down</text>
+                          <text x="400" y="46" class="lbl">Written by hand</text>
+                          <rect x="400" y="56" width="284" height="32" stroke="currentColor"/>
+                          <text x="414" y="77" class="lbl">Device and queues</text>
+                          <rect x="400" y="96" width="284" height="32" stroke="currentColor"/>
+                          <text x="414" y="117" class="lbl">Swapchain</text>
+                          <rect x="400" y="136" width="284" height="32" stroke="currentColor"/>
+                          <text x="414" y="157" class="lbl">Render passes</text>
+                          <rect x="400" y="176" width="284" height="32" stroke="currentColor"/>
+                          <text x="414" y="197" class="lbl">Pipeline state</text>
+                          <rect x="400" y="216" width="284" height="32" stroke="currentColor"/>
+                          <text x="414" y="237" class="lbl">Synchronisation</text>
+                        </svg></div>
+                        <p class="ds-scrollnote">Drawing scrolls sideways</p>
+                        <div class="ds-media">
+                          <img src="images/portfolio/portfolio-2.png" alt="Rendered output from the Vulkan renderer: shaded geometry lit in a dark scene." loading="lazy" decoding="async">
+                        </div>
+                      </div>
+                      <div class="ds-block">
+                        <dl class="ds-shows"><dt>Shows</dt><dd>Working one level below the engine, in C++ and Vulkan, where nothing is provided for you by default.</dd></dl>
+                        <dl><dt>Role</dt><dd>Sole author</dd></dl>
+                        <dl><dt>Period</dt><dd>03.2022 &ndash; 09.2023</dd></dl>
+                        <dl><dt>Stack</dt><dd>C++, Vulkan</dd></dl>
+                        <dl><dt>Source</dt><dd><a href="https://github.com/T0wby/SAE_Vulkan_Project" target="_blank" rel="noopener">Repository</a></dd></dl>
+                      </div>
+                    </div>
+                  </div></div>
+                </li>
+
+                <!-- sheet 07 -->
+                <li class="ds-sheet" data-source="public" data-stack="engine">
+                  <button type="button" class="ds-row" aria-expanded="false" aria-controls="sheet-07">
+                    <span class="ds-no">07</span>
+                    <span class="ds-desig">3D simulation project<small>SAE Institute Cologne, second semester &middot; 2022</small></span>
+                    <span class="ds-stack">Real&#8209;time 3D</span>
+                    <span class="ds-mark" aria-hidden="true"></span>
+                  </button>
+                  <div class="ds-body" id="sheet-07"><div>
+                    <div class="ds-sheet-inner">
+                      <div class="ds-draw">
+                        <div class="ds-media">
+                          <img src="images/portfolio/Semester2.png" alt="Scene from the 3D simulation project, showing terrain and scene lighting." loading="lazy" decoding="async">
+                        </div>
+                      </div>
+                      <div class="ds-block">
+                        <dl class="ds-shows"><dt>Shows</dt><dd>Real&#8209;time 3D built from the ground up early in the programme, before any engine did the work.</dd></dl>
+                        <dl><dt>Role</dt><dd>Sole author</dd></dl>
+                        <dl><dt>Period</dt><dd>2022</dd></dl>
+                        <dl><dt>Stack</dt><dd>Real&#8209;time 3D</dd></dl>
+                        <dl><dt>Source</dt><dd><a href="https://github.com/T0wby/SAE_Semester2Projekt" target="_blank" rel="noopener">Repository</a></dd></dl>
+                      </div>
+                    </div>
+                  </div></div>
+                </li>
+
+                <!-- sheet 08 -->
+                <li class="ds-sheet" data-source="public" data-stack="engine">
+                  <button type="button" class="ds-row" aria-expanded="false" aria-controls="sheet-08">
+                    <span class="ds-no">08</span>
+                    <span class="ds-desig">Two game jam entries<small>Spring in Space &middot; Through Chimney to Your Home</small></span>
+                    <span class="ds-stack">Fixed deadline &middot; Shipped publicly</span>
+                    <span class="ds-mark" aria-hidden="true"></span>
+                  </button>
+                  <div class="ds-body" id="sheet-08"><div>
+                    <div class="ds-sheet-inner">
+                      <div class="ds-draw">
+                        <div class="ds-media">
+                          <iframe src="https://www.youtube.com/embed/yPFehV9lu7c" title="Spring in Space — showcase video" loading="lazy" allowfullscreen></iframe>
+                        </div>
+                        <div class="ds-media">
+                          <img src="images/portfolio/SpringInSpace.png" alt="Title screen of the game jam entry Spring in Space." loading="lazy" decoding="async">
+                        </div>
+                        <div class="ds-media">
+                          <img src="images/portfolio/Chimney.png" alt="Scene from the game jam entry Through Chimney to Your Home." loading="lazy" decoding="async">
+                        </div>
+                      </div>
+                      <div class="ds-block">
+                        <dl class="ds-shows"><dt>Shows</dt><dd>Two entries taken from nothing to a public, playable page inside a jam deadline.</dd></dl>
+                        <dl><dt>Role</dt><dd>Programming, in a team</dd></dl>
+                        <dl><dt>Period</dt><dd>2022 &ndash; 2023</dd></dl>
+                        <dl><dt>Stack</dt><dd>Real&#8209;time 3D</dd></dl>
+                        <dl><dt>Source</dt><dd><a href="https://ancient-biscuit.itch.io/spring-in-space" target="_blank" rel="noopener">Spring in Space</a><a href="https://ancient-biscuit.itch.io/through-chimney" target="_blank" rel="noopener">Through Chimney</a></dd></dl>
+                      </div>
+                    </div>
+                  </div></div>
+                </li>
+
+                <!-- sheet 09 -->
+                <li class="ds-sheet" data-source="public" data-stack="engine">
+                  <button type="button" class="ds-row" aria-expanded="false" aria-controls="sheet-09">
+                    <span class="ds-no">09</span>
+                    <span class="ds-desig">Coursework: tower defense and 2D platformer<small>SAE Institute Cologne &middot; 2022</small></span>
+                    <span class="ds-stack">Programming fundamentals</span>
+                    <span class="ds-mark" aria-hidden="true"></span>
+                  </button>
+                  <div class="ds-body" id="sheet-09"><div>
+                    <div class="ds-sheet-inner">
+                      <div class="ds-draw">
+                        <div class="ds-media">
+                          <img src="images/portfolio/tower_defense.png" alt="Level view from the tower defense coursework project." loading="lazy" decoding="async">
+                        </div>
+                        <div class="ds-media">
+                          <img src="images/portfolio/2dJumpNRun.png" alt="Level view from the 2D platformer coursework project." loading="lazy" decoding="async">
+                        </div>
+                      </div>
+                      <div class="ds-block">
+                        <dl class="ds-shows"><dt>Shows</dt><dd>Where the engine work starts. Kept in the register because a drawing set does not hide its early sheets.</dd></dl>
+                        <dl><dt>Role</dt><dd>Sole author</dd></dl>
+                        <dl><dt>Period</dt><dd>2022</dd></dl>
+                        <dl><dt>Stack</dt><dd>Programming fundamentals</dd></dl>
+                        <dl><dt>Source</dt><dd><a href="https://github.com/T0wby/SAE_2dJumpNRun" target="_blank" rel="noopener">Platformer repository</a></dd></dl>
+                      </div>
+                    </div>
+                  </div></div>
+                </li>
+              </ol>
+              </div>
+
+              </div>
+
+              <!-- ===== back page: the two exits ===== -->
+              <div class="ds-close">
+                <div>
+                  <h3>Full record</h3>
+                  <p>The complete history, with every date and module, is in the CV.</p>
+                  <a href="cv/Lebenslauf_Tobias_Nuehlen_EN.pdf" class="btn">English CV</a>
+                  <a href="cv/Lebenslauf_Tobias_Nuehlen_GER.pdf" class="btn">German CV</a>
+                </div>
+                <div>
+                  <h3>Enquiries</h3>
+                  <p>Questions about any sheet, or about work that is not on one &mdash; the contact details are one click away.</p>
+                  <a href="#contact" class="btn hire-me" data-section-index="2">Get in touch</a>
+                </div>
+              </div>
+
             </div>
           </div>
-          <div class="row">
-              <!-- ====== portfolio item start ====== -->
-              <div class="portfolio-item padd-15">
-                  <h3 class="title">Mixed Reality Shooter (Bachelor's Thesis)</h3>
-                  <div class="portfolio-item-inner shadow-dark">
-                      <div class="portfolio-img">
-                          <p><a href="https://youtu.be/OwHYrSbE_iY"><img src="images/portfolio/portfolio-1.png" alt=""></a></p>
-                      </div>
-                  </div>
-              </div>
-              <!-- ====== portfolio item End ====== -->
-              <!-- ====== portfolio item start ====== -->
-              <div class="portfolio-item padd-15">
-                  <h3 class="title">Showcase</h3>
-                  <div class="portfolio-item-inner shadow-dark">
-                      <div class="portfolio-img">
-                          <iframe width="330" height="315" src="https://www.youtube.com/embed/OwHYrSbE_iY" allowfullscreen></iframe>
-                      </div>
-                  </div>
-              </div>
-              <!-- ====== portfolio item End ====== -->
-              <!-- ====== portfolio filler start ====== -->
-              <div class="portfolio-item padd-15">
-              </div>
-              <!-- ====== portfolio filler End ====== -->
-              <!-- ====== portfolio item start ====== -->
-              <div class="portfolio-item padd-15">
-                  <h3 class="title">Vulkan Engine/Applikation</h3>
-                  <div class="portfolio-item-inner shadow-dark">
-                      <div class="portfolio-img">
-                          <p><a href="https://github.com/T0wby/SAE_Vulkan_Project"><img src="images/portfolio/portfolio-2.png" alt=""></a></p>
-                      </div>
-                  </div>
-              </div>
-              <!-- ====== portfolio item End ====== -->
-              <!-- ====== portfolio item start ====== -->
-              <div class="portfolio-item padd-15">
-                  <h3 class="title">Diploma Project(In Development)</h3>
-                  <div class="portfolio-item-inner shadow-dark">
-                      <div class="portfolio-img">
-                          <p><a href="https://www.youtube.com/@GFFtheGame"><img src="images/portfolio/Genocide_for_Future.png" alt=""></a></p>
-                      </div>
-                  </div>
-              </div>
-              <!-- ====== portfolio item End ====== -->
-              <!-- ====== portfolio item start ====== -->
-              <div class="portfolio-item padd-15">
-                  <h3 class="title">Trailer(German)</h3>
-                  <div class="portfolio-item-inner shadow-dark">
-                      <div class="portfolio-img">
-                          <iframe width="330" height="315" src="https://www.youtube.com/embed/FxFqaCFlKqs" allowfullscreen></iframe>
-                      </div>
-                  </div>
-              </div>
-              <!-- ====== portfolio item End ====== -->
-              <!-- ====== portfolio filler start ====== -->
-              <div class="portfolio-item padd-15">
-                  <h3 class="title">Gameplay</h3>
-                  <div class="portfolio-item-inner shadow-dark">
-                      <div class="portfolio-img">
-                          <iframe width="330" height="315" src="https://www.youtube.com/embed/2r-JfsFNRvY" allowfullscreen></iframe>
-                      </div>
-                  </div>
-              </div>
-              <!-- ====== portfolio filler End ====== -->
-              <!-- ====== portfolio item start ====== -->
-              <div class="portfolio-item padd-15">
-                  <h3 class="title">3D Simulation Project</h3>
-                  <div class="portfolio-item-inner shadow-dark">
-                      <div class="portfolio-img">
-                          <p><a href="https://github.com/T0wby/SAE_Semester2Projekt"><img src="images/portfolio/Semester2.png" alt=""></a></p>
-                      </div>
-                  </div>
-              </div>
-              <!-- ====== portfolio item End ====== -->
-              <!-- ====== portfolio item start ====== -->
-              <div class="portfolio-item padd-15">
-                  <h3 class="title">Spring in Space(GameJam)</h3>
-                  <div class="portfolio-item-inner shadow-dark">
-                      <div class="portfolio-img">
-                          <p><a href="https://ancient-biscuit.itch.io/spring-in-space"><img src="images/portfolio/SpringInSpace.png" alt=""></a></p>
-                      </div>
-                  </div>
-              </div>
-              <!-- ====== portfolio item End ====== -->
-              <!-- ====== portfolio item start ====== -->
-              <div class="portfolio-item padd-15">
-                  <h3 class="title">Showcase</h3>
-                  <div class="portfolio-item-inner shadow-dark">
-                      <div class="portfolio-img">
-                          <iframe width="330" height="315" src="https://www.youtube.com/embed/yPFehV9lu7c" allowfullscreen></iframe>
-                      </div>
-                  </div>
-              </div>
-              <!-- ====== portfolio item End ====== -->
-              <!-- ====== portfolio filler start ====== -->
-              <div class="portfolio-item padd-15">
-              </div>
-              <!-- ====== portfolio filler End ====== -->
-              <!-- ====== portfolio item start ====== -->
-              <div class="portfolio-item padd-15">
-                  <h3 class="title">Through Chimney to Your Home(GameJam)</h3>
-                  <div class="portfolio-item-inner shadow-dark">
-                      <div class="portfolio-img">
-                          <p><a href="https://ancient-biscuit.itch.io/through-chimney"><img src="images/portfolio/Chimney.png" alt=""></a></p>
-                      </div>
-                  </div>
-              </div>
-              <!-- ====== portfolio item End ====== -->
-              <!-- ====== portfolio item start ====== -->
-              <div class="portfolio-item padd-15">
-                  <h3 class="title">Tower Defense</h3>
-                  <div class="portfolio-item-inner shadow-dark">
-                      <div class="portfolio-img">
-                          <img src="images/portfolio/tower_defense.png" alt="">
-                      </div>
-                  </div>
-              </div>
-              <!-- ====== portfolio item End ====== -->
-              <!-- ====== portfolio item start ====== -->
-              <div class="portfolio-item padd-15">
-                  <h3 class="title">2D Jump'n Run'</h3>
-                  <div class="portfolio-item-inner shadow-dark">
-                      <div class="portfolio-img">
-                          <p><a href="https://github.com/T0wby/SAE_2dJumpNRun"><img src="images/portfolio/2dJumpNRun.png" alt=""></a></p>
-                      </div>
-                  </div>
-              </div>
-              <!-- ====== portfolio item End ====== -->
-              </div>
         </div>
-          <script>
-              var videos = document.getElementsByClassName("custom-video");
-              for (var i = 0; i < videos.length; i++) {
-                  videos[i].volume = 0.2; // Set default volume for each video
-              }
-          </script>
       </section>
       <!-- ===== Portfolio Section End ===== -->
       <!-- ===== Contact Section Start ===== -->

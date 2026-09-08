@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-08T00:00:00Z",
+  "title": "Design System: Tobias Nühlen — Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "page-ground": {
+        "role": "neutral",
+        "displayName": "Lavender Page Ground",
+        "canonical": "#f2f2fc",
+        "note": "Incumbent template ground, not a chosen paper ground. Open decision.",
+        "tonalRamp": ["#26263a", "#3a3a58", "#4f4f76", "#6f6f96", "#9494b4", "#b9b9d2", "#dcdcec", "#f2f2fc"]
+      },
+      "sheet-ground": {
+        "role": "neutral",
+        "displayName": "Sheet Fill",
+        "canonical": "#fdf9ff",
+        "tonalRamp": ["#2a2430", "#3f374a", "#564b64", "#77698a", "#9c8fae", "#c3b9d0", "#e6dff0", "#fdf9ff"]
+      },
+      "rule-hairline": {
+        "role": "neutral",
+        "displayName": "Hairline Rule",
+        "canonical": "#e8dfec",
+        "tonalRamp": ["#241f27", "#38313c", "#4d4453", "#6d6274", "#928699", "#b9aec0", "#d6cbdb", "#e8dfec"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Drafting Ink",
+        "canonical": "#302e4d",
+        "tonalRamp": ["#131222", "#1f1e34", "#302e4d", "#464368", "#605d87", "#8683a8", "#b3b1ca", "#dedde9"]
+      },
+      "ink-secondary": {
+        "role": "neutral",
+        "displayName": "Structural Ink",
+        "canonical": "#504e70",
+        "tonalRamp": ["#1a1926", "#2a293c", "#3b3a54", "#504e70", "#6c6a92", "#918fb2", "#bab9d0", "#e2e1ea"]
+      },
+      "page-ground-dark": { "role": "neutral", "displayName": "Night Page Ground", "canonical": "#151515", "tonalRamp": ["#000000", "#0b0b0b", "#151515", "#222222", "#393939", "#5c5c5c", "#8f8f8f", "#c9c9c9"] },
+      "sheet-ground-dark": { "role": "neutral", "displayName": "Night Sheet Fill", "canonical": "#222222", "tonalRamp": ["#000000", "#101010", "#222222", "#333333", "#4d4d4d", "#737373", "#a3a3a3", "#d6d6d6"] },
+      "rule-hairline-dark": { "role": "neutral", "displayName": "Night Hairline", "canonical": "#393939", "tonalRamp": ["#0a0a0a", "#1a1a1a", "#2a2a2a", "#393939", "#585858", "#828282", "#b0b0b0", "#dedede"] },
+      "ink-dark": { "role": "neutral", "displayName": "Night Ink", "canonical": "#ffffff", "tonalRamp": ["#262626", "#3d3d3d", "#5c5c5c", "#808080", "#a6a6a6", "#c9c9c9", "#e8e8e8", "#ffffff"] },
+      "ink-secondary-dark": { "role": "neutral", "displayName": "Night Structural Ink", "canonical": "#e9e9e9", "tonalRamp": ["#232323", "#3a3a3a", "#575757", "#7b7b7b", "#a1a1a1", "#c4c4c4", "#dcdcdc", "#e9e9e9"] },
+      "signal-crimson": {
+        "role": "primary",
+        "displayName": "Signal Crimson",
+        "canonical": "#e71838",
+        "note": "Default accent (color-1). Darkened from #ec1839 so white text on it passes WCAG AA.",
+        "tonalRamp": ["#2c0409", "#4a0710", "#6e0b19", "#951024", "#bd1430", "#e71838", "#f4657a", "#fbc0c9"]
+      },
+      "signal-rust": { "role": "primary", "displayName": "Signal Rust", "canonical": "#cd4b0c", "tonalRamp": ["#280f02", "#421904", "#642506", "#883209", "#a83e0a", "#cd4b0c", "#ee7f45", "#f8c5a5"] },
+      "signal-pine": { "role": "primary", "displayName": "Signal Pine", "canonical": "#298561", "tonalRamp": ["#071a13", "#0d2c20", "#144530", "#1c5c41", "#236f51", "#298561", "#54b98f", "#b3e3cf"] },
+      "signal-cobalt": { "role": "primary", "displayName": "Signal Cobalt", "canonical": "#1854b4", "tonalRamp": ["#04101f", "#071c38", "#0b2c58", "#0f3c78", "#134795", "#1854b4", "#4f8ae0", "#b6d0f5"] },
+      "signal-magenta": { "role": "primary", "displayName": "Signal Magenta", "canonical": "#d81ea0", "tonalRamp": ["#2b0620", "#460a34", "#690f4d", "#8e1468", "#b3197f", "#d81ea0", "#ee63c1", "#f9bee4"] },
+      "signal-ink": {
+        "role": "primary",
+        "displayName": "Signal Ink",
+        "canonical": "color-mix(in srgb, var(--skin-color) 94%, #000)",
+        "note": "Text form of the accent. Derived at runtime from whichever skin is active; dark mode mixes 75% toward white instead."
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Year Marker", "purpose": "The year label on the register axis. Compressed to wdth 80 so four digits fit the 76px gutter. 24px at 991px, 17px at 767px." },
+      "headline": { "displayName": "Designation", "purpose": "Project title in a register row, wdth 92 so long titles hold two lines." },
+      "title": { "displayName": "Set Value", "purpose": "Values in the set title block cells, with a 12px sub-note beneath." },
+      "body": { "displayName": "Sheet Value", "purpose": "Title-block values inside an opened sheet. The Shows field runs 15px/500 as the sheet lede." },
+      "caption": { "displayName": "Drawing Caption", "purpose": "Notes under a schematic, including the NDA disclosure." },
+      "label": { "displayName": "Field Label", "purpose": "Every field name, uppercase. Filters, legend and count use the same size at 0.09em tracking." },
+      "wordmark": { "displayName": "Wordmark", "purpose": "The Towby logo in the aside. Not available to any other surface." }
+    },
+    "shadows": [
+      { "name": "shadow-dark", "value": "0 2px 12px rgba(48, 46, 77, 0.13)", "purpose": "Legacy sections only (aside, cards, pill buttons). Forbidden inside the drawing set, which is flat by rule." }
+    ],
+    "motion": [
+      { "name": "ease-draw", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "The drawing set's only easing. Used by the sheet reveal (0.42s) and the expand mark (0.32s)." },
+      { "name": "ds-reveal", "value": "@keyframes ds-reveal { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }", "purpose": "An opened sheet's body settles into place. Disabled under prefers-reduced-motion." },
+      { "name": "state-fade", "value": "0.18s ease", "purpose": "Colour and border transitions on hover/pressed states across filters, rows, marks and buttons." }
+    ],
+    "breakpoints": [
+      { "name": "aside", "value": "1199px" },
+      { "name": "md", "value": "991px" },
+      { "name": "sm", "value": "767px" }
+    ],
+    "strokes": [
+      { "name": "ds-rule", "value": "1.5px", "purpose": "The single stroke weight. Every CSS border, every SVG stroke-width, and both bars of the expand mark." },
+      { "name": "ds-dash", "value": "7 5", "purpose": "Dash pattern for internal divisions in schematics; the frame-edge dash uses the CSS dashed style to mark an NDA source." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Filter Chip",
+      "kind": "chip",
+      "refersTo": "ds-filter",
+      "description": "Square outlined stack filter; pressed state is accent text on an accent border, never a fill.",
+      "html": "<div style=\"display:flex;gap:6px\"><button type=\"button\" class=\"ds-filter\" aria-pressed=\"true\">All</button><button type=\"button\" class=\"ds-filter\" aria-pressed=\"false\">C# / .NET</button><button type=\"button\" class=\"ds-filter\" aria-pressed=\"false\">C++ / Vulkan</button></div>",
+      "css": ".ds-filter { font-family: Archivo, 'Segoe UI', system-ui, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: var(--text-black-700, #504e70); background: transparent; border: 1.5px solid var(--bg-black-50, #e8dfec); border-radius: 0; padding: 5px 10px; cursor: pointer; transition: color 0.18s ease, border-color 0.18s ease; } .ds-filter:hover { color: var(--text-black-900, #302e4d); border-color: var(--text-black-700, #504e70); } .ds-filter:focus-visible { outline: 2px solid var(--skin-color, #e71838); outline-offset: 3px; border-radius: 2px; } .ds-filter[aria-pressed=\"true\"] { color: color-mix(in srgb, var(--skin-color, #e71838) 94%, #000); border-color: var(--skin-color, #e71838); }"
+    },
+    {
+      "name": "Register Row",
+      "kind": "button",
+      "refersTo": "ds-row",
+      "description": "The sheet index entry: a real button with a structural left edge that goes dashed when the source is under NDA.",
+      "html": "<button type=\"button\" class=\"ds-row\" aria-expanded=\"false\"><span class=\"ds-no\">01</span><span class=\"ds-desig\">Porting a grown UWP application to Blazor<small>werusys Industrieinformatik &middot; 09.2024 &ndash; present</small></span><span class=\"ds-stack\">C# &middot; Blazor &middot; .NET</span><span class=\"ds-mark\" aria-hidden=\"true\"></span></button>",
+      "css": ".ds-row { font-family: Archivo, 'Segoe UI', system-ui, sans-serif; font-variant-numeric: tabular-nums; width: 100%; text-align: left; background: transparent; border: 0; border-left: 1.5px solid var(--text-black-700, #504e70); border-radius: 0; padding: 15px 14px 15px 18px; cursor: pointer; display: grid; grid-template-columns: 3rem minmax(0,1fr) 13rem 1.4rem; align-items: baseline; column-gap: 20px; color: var(--text-black-900, #302e4d); transition: background-color 0.18s ease; } .ds-row[data-source=\"nda\"] { border-left-style: dashed; } .ds-no { font-size: 13px; font-weight: 700; letter-spacing: 0.06em; color: var(--text-black-700, #504e70); } .ds-desig { font-size: 19px; font-weight: 600; font-stretch: 92%; line-height: 1.3; } .ds-desig small { display: block; font-size: 13px; font-weight: 400; font-stretch: 100%; color: var(--text-black-700, #504e70); margin-top: 3px; } .ds-stack { font-size: 12px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--text-black-700, #504e70); line-height: 1.5; } .ds-mark { justify-self: end; align-self: center; width: 13px; height: 13px; position: relative; } .ds-mark::before, .ds-mark::after { content: \"\"; position: absolute; left: 50%; top: 50%; background: var(--text-black-700, #504e70); transition: transform 0.32s cubic-bezier(0.16,1,0.3,1), background-color 0.18s ease; } .ds-mark::before { width: 13px; height: 1.5px; transform: translate(-50%,-50%); } .ds-mark::after { width: 1.5px; height: 13px; transform: translate(-50%,-50%); } .ds-row:hover { background: var(--bg-black-100, #fdf9ff); } .ds-row:hover .ds-no { color: color-mix(in srgb, var(--skin-color, #e71838) 94%, #000); } .ds-row:hover .ds-mark::before, .ds-row:hover .ds-mark::after { background: var(--skin-color, #e71838); } .ds-row[aria-expanded=\"true\"] .ds-mark::after { transform: translate(-50%,-50%) scaleY(0); } .ds-row:focus-visible { outline: 2px solid var(--skin-color, #e71838); outline-offset: 3px; border-radius: 2px; }"
+    },
+    {
+      "name": "Set Title Block",
+      "kind": "card",
+      "refersTo": "ds-set-cell",
+      "description": "The drawing set's header: four labelled cells divided by hairlines, sheet-ground filled, under the frame edge.",
+      "html": "<div class=\"ds-set\"><dl class=\"ds-cell\"><dt>Drawing set</dt><dd>Selected work<small>Tobias N&uuml;hlen</small></dd></dl><dl class=\"ds-cell\"><dt>Sheets</dt><dd>09<small>professional and engine, one register</small></dd></dl><dl class=\"ds-cell\"><dt>Period</dt><dd>2022 &ndash; present<small>ordered newest first</small></dd></dl><dl class=\"ds-cell\"><dt>Discipline</dt><dd>Interface layer<small>industrial .NET and real-time engines</small></dd></dl></div>",
+      "css": ".ds-set { font-family: Archivo, 'Segoe UI', system-ui, sans-serif; font-variant-numeric: tabular-nums; display: grid; grid-template-columns: repeat(4, 1fr); background: var(--bg-black-100, #fdf9ff); border: 1.5px solid var(--text-black-700, #504e70); border-radius: 0; } .ds-cell { padding: 12px 16px; border-right: 1.5px solid var(--bg-black-50, #e8dfec); } .ds-cell:last-child { border-right: 0; } .ds-cell dt { font-size: 11px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; color: var(--text-black-700, #504e70); margin-bottom: 5px; } .ds-cell dd { font-size: 16px; font-weight: 600; font-stretch: 90%; line-height: 1.4; color: var(--text-black-900, #302e4d); } .ds-cell dd small { display: block; font-size: 12px; font-weight: 400; color: var(--text-black-700, #504e70); margin-top: 3px; }"
+    },
+    {
+      "name": "Sheet Title Block",
+      "kind": "card",
+      "refersTo": "ds-block-cell",
+      "description": "Inside an opened sheet: a labelled dl grid, bottom-aligned, one hairline per row and none after the last.",
+      "html": "<div class=\"ds-block\"><dl class=\"ds-shows\"><dt>Shows</dt><dd>Breaking a grown application into reusable components.</dd></dl><dl><dt>Role</dt><dd>Owns the UI side of the port</dd></dl><dl><dt>Stack</dt><dd>C#, .NET, Blazor, XAML, MVVM</dd></dl><dl><dt>Source</dt><dd><a href=\"#\">Repository</a></dd></dl></div>",
+      "css": ".ds-block { font-family: Archivo, 'Segoe UI', system-ui, sans-serif; font-variant-numeric: tabular-nums; display: flex; flex-direction: column; justify-content: flex-end; background: var(--bg-black-100, #fdf9ff); border-left: 1.5px solid var(--text-black-700, #504e70); } .ds-block dl { display: grid; grid-template-columns: 6.5rem minmax(0,1fr); border-bottom: 1.5px solid var(--bg-black-50, #e8dfec); } .ds-block dl:last-of-type { border-bottom: 0; } .ds-block dt { font-size: 11px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; color: var(--text-black-700, #504e70); padding: 11px 12px 11px 16px; border-right: 1.5px solid var(--bg-black-50, #e8dfec); } .ds-block dd { font-size: 14px; line-height: 1.6; color: var(--text-black-900, #302e4d); padding: 11px 16px 11px 12px; } .ds-block .ds-shows dd { font-size: 15px; font-weight: 500; } .ds-block dd a { color: color-mix(in srgb, var(--skin-color, #e71838) 94%, #000); border-bottom: 1.5px solid currentColor; text-decoration: none; text-underline-offset: 3px; } .ds-block dd a:focus-visible { outline: 2px solid var(--skin-color, #e71838); outline-offset: 3px; border-radius: 2px; }"
+    },
+    {
+      "name": "Year Band on Axis",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "The continuous year axis: one unbroken rule, each band hung in the gutter and tied on with a tick.",
+      "html": "<div class=\"ds-axis\"><p class=\"ds-band\"><b>2024</b><i></i></p><p class=\"ds-band\"><b>2023</b><i></i></p></div>",
+      "css": ".ds-axis { font-family: Archivo, 'Segoe UI', system-ui, sans-serif; font-variant-numeric: tabular-nums; position: relative; padding: 18px 0 18px 84px; } .ds-axis::before { content: \"\"; position: absolute; left: 60px; top: 0; bottom: 0; border-left: 1.5px solid var(--text-black-700, #504e70); } .ds-band { position: relative; display: flex; align-items: baseline; gap: 14px; padding: 26px 18px 8px 0; } .ds-band:first-child { padding-top: 0; } .ds-band::before { content: \"\"; position: absolute; left: -25px; top: 0.62em; width: 25px; border-top: 1.5px solid var(--text-black-700, #504e70); } .ds-band b { position: absolute; left: -84px; width: 76px; text-align: right; white-space: nowrap; font-size: 30px; font-weight: 700; font-stretch: 80%; letter-spacing: 0.01em; line-height: 1; color: var(--text-black-900, #302e4d); } .ds-band i { flex: 1; height: 0; border-top: 1.5px solid var(--bg-black-50, #e8dfec); }"
+    },
+    {
+      "name": "Legend",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Teaches the frame-edge encoding: a solid specimen line for published source, a dashed one for interior-only.",
+      "html": "<p class=\"ds-legend\"><span>Source published</span><span class=\"is-hidden-edge\">Interior only</span></p>",
+      "css": ".ds-legend { font-family: Archivo, 'Segoe UI', system-ui, sans-serif; display: flex; gap: 18px; font-size: 11px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: var(--text-black-700, #504e70); } .ds-legend span { display: inline-flex; align-items: center; gap: 7px; } .ds-legend span::before { content: \"\"; width: 26px; height: 0; border-top: 1.5px solid var(--text-black-700, #504e70); } .ds-legend .is-hidden-edge::before { border-top-style: dashed; }"
+    },
+    {
+      "name": "Outlined Exit Button",
+      "kind": "button",
+      "refersTo": "ds-close-btn",
+      "description": "The CV / contact exits in the closing block. Square, outlined, transparent; hover moves border and text to accent.",
+      "html": "<a class=\"ds-btn\" href=\"#\">Download CV (EN)</a>",
+      "css": ".ds-btn { font-family: Archivo, 'Segoe UI', system-ui, sans-serif; display: inline-block; background: transparent; border: 1.5px solid var(--text-black-700, #504e70); border-radius: 0; padding: 11px 22px; color: var(--text-black-900, #302e4d); font-size: 13px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; text-decoration: none; box-shadow: none; transition: border-color 0.18s ease, color 0.18s ease; } .ds-btn:hover { background: transparent; transform: none; box-shadow: none; border-color: var(--skin-color, #e71838); color: color-mix(in srgb, var(--skin-color, #e71838) 94%, #000); } .ds-btn:focus-visible { outline: 2px solid var(--skin-color, #e71838); outline-offset: 3px; border-radius: 2px; }"
+    },
+    {
+      "name": "Schematic",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "An authored line drawing at the same 1.5px weight as the page rules; accent strokes mark flow, dashes mark internal division.",
+      "html": "<div class=\"ds-dwgbox\" tabindex=\"0\" role=\"region\" aria-label=\"Schematic, scrolls sideways\"><svg class=\"ds-dwg\" viewBox=\"0 0 420 180\" role=\"img\" aria-labelledby=\"dt dd\"><title id=\"dt\">View bound to a view model</title><desc id=\"dd\">A XAML view is bound two-way to a view model.</desc><rect x=\"16\" y=\"40\" width=\"140\" height=\"70\" stroke=\"currentColor\"/><text x=\"26\" y=\"72\">View</text><text x=\"26\" y=\"90\" class=\"lbl\">XAML</text><path d=\"M16 96h140\" stroke=\"currentColor\" class=\"dash\"/><rect x=\"248\" y=\"40\" width=\"140\" height=\"70\" stroke=\"currentColor\"/><text x=\"258\" y=\"72\">View model</text><path d=\"M164 66h72\" stroke=\"currentColor\" class=\"sig\"/><path d=\"M228 59l10 7-10 7\" stroke=\"currentColor\" class=\"sig\"/><text x=\"172\" y=\"52\" class=\"lbl\">Commands</text></svg></div>",
+      "css": ".ds-dwgbox { overflow-x: auto; } .ds-dwg { width: 100%; max-width: 100%; height: auto; display: block; color: var(--text-black-900, #302e4d); } .ds-dwg [stroke] { stroke: currentColor; stroke-width: 1.5; fill: none; vector-effect: non-scaling-stroke; } .ds-dwg .dash { stroke-dasharray: 7 5; } .ds-dwg .sig { stroke: var(--skin-color, #e71838); } .ds-dwg text { fill: currentColor; stroke: none; font-family: Archivo, 'Segoe UI', system-ui, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; } .ds-dwg .lbl { fill: var(--text-black-700, #504e70); font-size: 10px; letter-spacing: 0.1em; } .ds-dwgbox:focus-visible { outline: 2px solid var(--skin-color, #e71838); outline-offset: 3px; border-radius: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Drawing Set",
+    "overview": "The portfolio is a technical drawing set to DIN 6771 conventions: a sheet frame with corner registration marks, a title block as a labelled cell grid, a numbered register of sheets hung on a continuous year axis, and authored line schematics drawn at the same stroke weight as the rules around them. The thesis is that industrial .NET work and real-time engine work are documented on the identical spec sheet, so a reader compares them in one format instead of reading nine differently styled marketing cards. Nothing on a sheet is free to shout louder than its neighbour.\n\nThe register is a drafting document, not a gallery. Density is high and ornament is zero: no radii, no gradients, no shadows, no imagery outside the drawing area of an opened sheet. Everything is carried by one ink, one hairline, and one accent used as a signal rather than as decoration. Where a project's source cannot be shown, the drawing shows the architecture and the frame edge itself says so — the encoding is in the line, not in a badge.\n\nLegibility is a hard constraint, not a preference. All five accents were darkened until white text on them passes WCAG AA, and small accent text is drawn from a theme-aware derived ink rather than the raw accent so it stays readable on the light page and the dark one.\n\nScope: this is a partial world. The Portfolio section is the system; Home, About and Contact still carry the incumbent free-template look the user named an anti-reference, and are legacy, not system.",
+    "keyCharacteristics": [
+      "One stroke weight (1.5px) for every rule, border, SVG stroke and the +/− mark",
+      "Zero corner radius throughout the world; the only radius on the page is the 2px focus ring",
+      "Tabular figures everywhere inside the register",
+      "Uppercase, wide-tracked 11px labels as the only label grammar",
+      "Accent appears as a signal (marks, fills, pressed state, current-work dot) and nothing else",
+      "Solid vs dashed left frame edge encodes published source vs under-NDA"
+    ],
+    "rules": [
+      { "name": "The Two Rule Weights Rule", "body": "Lines come in exactly two colours and one thickness. Structural edges (frame, axis, row left edge, registration marks) use Secondary Ink; subdivisions inside a frame use Hairline. Never a third.", "section": "colors" },
+      { "name": "The Signal-Is-Status Rule", "body": "The accent marks state, not importance: current, hovered, open, pressed, focused, or flow direction in a schematic. If a use of the accent does not answer \"what state is this in\", it does not get the accent.", "section": "colors" },
+      { "name": "The Derived-Ink Rule", "body": "Accent as fill or stroke uses --ds-signal; accent as text uses --ds-signal-ink. Any new accent-coloured text inherits the derived value so it survives both themes.", "section": "colors" },
+      { "name": "The Tabular Figures Rule", "body": "font-variant-numeric: tabular-nums is set on everything inside the register. Sheet numbers, years and date spans must align in a column; proportional figures break the document.", "section": "typography" },
+      { "name": "The Label Grammar Rule", "body": "Field names are uppercase, 11px, 600, tracked 0.13em, in Secondary Ink. That is the only label style. New fields adopt it verbatim; no sentence-case field names, no bold inline labels.", "section": "typography" },
+      { "name": "The One Family Rule", "body": "Archivo carries display, body and label. Differentiate by weight, size and the width axis — never by adding a second face. Clicker Script is the logo only and is not available to any other surface.", "section": "typography" },
+      { "name": "The Continuous Axis Rule", "body": "The year axis is one unbroken rule spanning the whole register, not a per-band segment. Bands attach to it with ticks. When a filter empties a band, the band and its list are both hidden so the axis never carries an empty year.", "section": "layout" },
+      { "name": "The In-Place Rule", "body": "A sheet opens where it sits. No modal, no detail page, no route change; the reader never loses their place in the register.", "section": "layout" },
+      { "name": "The Flat Sheet Rule", "body": "Nothing in the drawing set casts a shadow. A surface that needs to come forward is filled with sheet ground or bounded by a structural rule — never lifted.", "section": "elevation" },
+      { "name": "The One Weight Rule", "body": "1.5px, everywhere, at every scale. A schematic scaled down keeps its stroke via non-scaling-stroke. No hairline is thinner and no emphasis line is thicker; emphasis is a colour change, never a weight change.", "section": "shapes" },
+      { "name": "The Square Corner Rule", "body": "Radius is zero inside the drawing set. The only permitted curves are the focus ring (2px) and the 7px current-work dot.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do draw every rule, border, SVG stroke and mark at --ds-rule (1.5px), with vector-effect: non-scaling-stroke on anything that scales.",
+      "Do use exactly two line colours: Secondary Ink for structure, Hairline for subdivision.",
+      "Do encode source availability in the left frame edge — solid for published, dashed for NDA — and always ship the legend that explains it.",
+      "Do set accent text from --ds-signal-ink and accent fills and strokes from --ds-signal.",
+      "Do label every field in uppercase 11px, 600, tracked 0.13em, in Secondary Ink.",
+      "Do keep font-variant-numeric: tabular-nums on everything inside the register.",
+      "Do build expand and filter controls as real <button> elements carrying aria-expanded / aria-controls / aria-pressed, and make any horizontally scrolling drawing box focusable (tabindex=\"0\", role=\"region\", an aria-label) with a visible scroll note at 767px.",
+      "Do give every schematic a <title> and <desc> referenced by aria-labelledby.",
+      "Do guard every animation behind prefers-reduced-motion: reduce.",
+      "Do keep all five accents at AA contrast for white text before adding a sixth."
+    ],
+    "donts": [
+      "Don't introduce a second stroke weight to signal emphasis. Emphasis is colour.",
+      "Don't round a corner inside the drawing set; radius is 0 except the 2px focus ring.",
+      "Don't apply .shadow-dark or any box-shadow to a drawing-set surface.",
+      "Don't colour anything with the accent unless it reports state (current, hover, open, pressed, focus, or flow direction).",
+      "Don't open a sheet in a modal, an overlay or a separate route; sheets expand in place.",
+      "Don't leave a year band on the axis when a filter has emptied it, or leave a filtered-out sheet expanded behind the filter.",
+      "Don't add a second type family. Differentiate with Archivo's weight and width axes.",
+      "Don't show an employer's product interface; NDA sheets carry an architecture schematic and say so in the caption and in the Source field.",
+      "Don't carry the legacy sections' patterns — the pill button with its hover scale, the double accent bar under the section title, the Font Awesome glyph icons, the percentage skill bars — into the drawing set or into any new surface."
+    ],
+    "openDecisions": [
+      "The drawing set sits on the incumbent page ground (--bg-black-900, a lavender-tinted near-white inherited from the template) rather than a paper ground of its own. Recorded as shipped state, not as a system choice; the user has been asked."
+    ]
+  }
+}

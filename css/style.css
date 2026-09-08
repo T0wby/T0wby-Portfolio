@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=Clicker+Script&display=swap');
 :root
 {
     --bg-black-900:#f2f2fc;
@@ -19,7 +19,7 @@ body
 {
     line-height: 1.5;
     font-size: 16px;
-    font-family: 'Poppins' sans-serif;
+    font-family: 'Archivo', 'Segoe UI', system-ui, sans-serif;
 }
 *
 {
@@ -32,6 +32,17 @@ body
 ::before,::after
 {
     box-sizing: border-box;
+}
+:focus-visible
+{
+    outline: 2px solid var(--skin-color);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+::selection
+{
+    background: var(--skin-color);
+    color: #ffffff;
 }
 ul
 {
@@ -156,7 +167,7 @@ ul
 }
 .shadow-dark
 {
-    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+    box-shadow: 0 2px 12px rgba(48, 46, 77, 0.13);
 }
 /* aside */
 .aside
@@ -449,7 +460,7 @@ h3.my-profession
     flex: 0 0 100%;
     max-width: 100%;
 }
-.about .about-content .skills .skill-item h5
+.about .about-content .skills .skill-item h4
 {
     line-height: 40px;
     font-weight: 600;
@@ -569,105 +580,801 @@ h3.my-profession
     line-height: 25px;
     font-size: 16px;
     text-align: justify;
+    hyphens: auto;
     color: var(--text-black-700);
 }
 /* service */
-.service .container
+/* ===== Portfolio — drawing set (DIN 6771 title block / sheet index) ===== */
+.portfolio
 {
-    padding-bottom: 40px;
+    --ds-rule: 1.5px;
+    --ds-line: var(--bg-black-50);
+    --ds-line-strong: var(--text-black-700);
+    --ds-sheet: var(--bg-black-100);
+    --ds-signal: var(--skin-color);
+    --ds-signal-ink: color-mix(in srgb, var(--skin-color) 94%, #000);
+    --ds-label: 11px;
 }
-.service .service-item
+body.dark .portfolio
 {
-    margin-bottom: 30px;
-    flex: 0 0 33.33%;
-    max-width: 33.33%;
+    --ds-signal-ink: color-mix(in srgb, var(--skin-color) 75%, #fff);
 }
-.service .service-item .service-item-inner
-{
-    background-color: var(--bg-black-100);
-    border: 1px solid var(--bg-black-50);
-    border-radius: 10px;
-    padding: 30px 15px;
-    text-align: center;
-    transition: all 0.3S ease;
-}
-.service .service-item .service-item-inner:hover
-{
-    box-shadow:  0 0 20px rgba(48, 46, 77, 0.15);
-}
-.service .service-item .service-item-inner .icon 
-{
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    display: block;
-    margin:  0 auto 30px;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-.service .service-item .service-item-inner .icon .fa
-{
-    font-size: 40px;
-    line-height: 60px;
-    color: var(--skin-color);
-    transition: all 0.3s ease;
-}
-.service .service-item .service-item-inner:hover .icon
-{
-    background: var(--skin-color);
-}
-.service .service-item .service-item-inner:hover .icon .fa
-{
-    font-size: 25px;
-    color: #ffffff;
-}
-.service .service-item .service-item-inner h4
-{
-    font-size: 18px;
-    margin-bottom: 15px;
-    color: var(--text-black-900);
-    font-weight: 700;
-    text-transform: capitalize;
-}
-.service .service-item .service-item-inner p
-{
-    font-size: 16px;
-    color: var(--text-black-700);
-    line-height: 25px;
-}
-/* portfolio */
 .portfolio .container
 {
     padding-bottom: 40px;
 }
-.portfolio .portfolio-heading
+.portfolio .ds
 {
     flex: 0 0 100%;
     max-width: 100%;
-    margin-bottom: 40px;
+    min-width: 0;
 }
-.portfolio .portfolio-heading h2
+.portfolio .ds-register,
+.portfolio .ds-sheet,
+.portfolio .ds-set
+{
+    min-width: 0;
+}
+.portfolio .ds *
+{
+    font-variant-numeric: tabular-nums;
+}
+
+/* ---- set title block: the drawing set's own header ---- */
+.portfolio .ds-frame
+{
+    border: var(--ds-rule) solid var(--ds-line-strong);
+    position: relative;
+}
+.portfolio .ds-frame::before,
+.portfolio .ds-frame::after,
+.portfolio .ds-set::before,
+.portfolio .ds-axis::after
+{
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border: var(--ds-rule) solid var(--ds-line-strong);
+    background: var(--bg-black-900);
+}
+.portfolio .ds-frame::before
+{
+    top: -5px;
+    left: -5px;
+}
+.portfolio .ds-frame::after
+{
+    bottom: -5px;
+    right: -5px;
+}
+.portfolio .ds-set
+{
+    position: relative;
+}
+.portfolio .ds-set::before
+{
+    top: -5px;
+    right: -5px;
+}
+.portfolio .ds-axis::after
+{
+    left: -5px;
+    bottom: -5px;
+}
+.portfolio .ds-frame
+{
+    overflow: visible;
+}
+.portfolio .ds-set
+{
+    border-bottom: var(--ds-rule) solid var(--ds-line-strong);
+    background: var(--ds-sheet);
+}
+.portfolio .ds-set-grid
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.portfolio .ds-cell
+{
+    padding: 12px 16px;
+    border-right: var(--ds-rule) solid var(--ds-line);
+}
+.portfolio .ds-cell:last-child
+{
+    border-right: 0;
+}
+.portfolio .ds-cell dt
+{
+    font-size: var(--ds-label);
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--text-black-700);
+    margin-bottom: 5px;
+}
+.portfolio .ds-cell dd
+{
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: 90%;
+    color: var(--text-black-900);
+    line-height: 1.4;
+}
+.portfolio .ds-cell dd small
+{
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--text-black-700);
+    margin-top: 3px;
+}
+
+/* ---- legend + filter bar ---- */
+.portfolio .ds-bar
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 28px;
+    align-items: center;
+    padding: 12px 16px;
+    border-top: var(--ds-rule) solid var(--ds-line);
+}
+.portfolio .ds-legend
+{
+    display: flex;
+    gap: 18px;
+    font-size: var(--ds-label);
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--text-black-700);
+    font-weight: 600;
+}
+.portfolio .ds-legend span
+{
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+.portfolio .ds-legend span::before
+{
+    content: "";
+    width: 26px;
+    height: 0;
+    border-top: var(--ds-rule) solid var(--text-black-700);
+}
+.portfolio .ds-legend .is-hidden-edge::before
+{
+    border-top-style: dashed;
+}
+.portfolio .ds-filters
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-left: auto;
+}
+.portfolio .ds-filter
+{
+    font: inherit;
+    font-size: var(--ds-label);
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--text-black-700);
+    background: transparent;
+    border: var(--ds-rule) solid var(--ds-line);
+    border-radius: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: color 0.18s ease, border-color 0.18s ease;
+}
+.portfolio .ds-filter:hover
 {
     color: var(--text-black-900);
+    border-color: var(--ds-line-strong);
+}
+.portfolio .ds-filter[aria-pressed="true"]
+{
+    color: var(--ds-signal);
+    color: var(--ds-signal-ink);
+    border-color: var(--ds-signal);
+}
+.portfolio .ds-count
+{
+    font-size: var(--ds-label);
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--text-black-700);
+}
+
+/* ---- the register ---- */
+.portfolio .ds-register
+{
+    list-style: none;
+}
+.portfolio .ds-axis
+{
+    position: relative;
+    padding: 18px 0 18px 104px;
+}
+.portfolio .ds-axis::before
+{
+    content: "";
+    position: absolute;
+    left: 80px;
+    top: 0;
+    bottom: 0;
+    border-left: var(--ds-rule) solid var(--ds-line-strong);
+}
+.portfolio .ds-band
+{
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    padding: 26px 18px 8px 0;
+}
+.portfolio .ds-band:first-child
+{
+    padding-top: 0;
+}
+.portfolio .ds-band b
+{
+    position: absolute;
+    left: -104px;
+    width: 72px;
+    text-align: right;
+    white-space: nowrap;
+}
+.portfolio .ds-band::before
+{
+    content: "";
+    position: absolute;
+    left: -24px;
+    top: 0.62em;
+    width: 24px;
+    border-top: var(--ds-rule) solid var(--ds-line-strong);
+}
+.portfolio .ds-band b
+{
+    font-size: 30px;
+    font-weight: 700;
+    font-stretch: 80%;
+    letter-spacing: 0.01em;
+    color: var(--text-black-900);
+    line-height: 1;
+}
+.portfolio .ds-band i
+{
+    flex: 1;
+    height: 0;
+    border-top: var(--ds-rule) solid var(--ds-line);
+}
+.portfolio .ds-current
+{
+    font-style: normal;
+    font-size: var(--ds-label);
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--ds-signal);
+    color: var(--ds-signal-ink);
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+.portfolio .ds-current::before
+{
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--ds-signal);
+}
+
+.portfolio .ds-sheet
+{
+    border-top: var(--ds-rule) solid var(--ds-line);
+    margin: 0 18px 0 0;
+}
+.portfolio .ds-sheet[hidden],
+.portfolio .ds-band[hidden],
+.portfolio .ds-register[hidden]
+{
+    display: none;
+}
+
+/* ---- register row ---- */
+.portfolio .ds-row
+{
+    font: inherit;
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: 0;
+    border-left: var(--ds-rule) solid var(--ds-line-strong);
+    padding: 15px 14px 15px 18px;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 3rem minmax(0, 1fr) 13rem 1.4rem;
+    align-items: baseline;
+    column-gap: 20px;
+    color: var(--text-black-900);
+    transition: background-color 0.18s ease;
+}
+.portfolio .ds-sheet[data-source="nda"] .ds-row
+{
+    border-left-style: dashed;
+}
+.portfolio .ds-row:hover
+{
+    background: var(--ds-sheet);
+}
+.portfolio .ds-no
+{
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--text-black-700);
+}
+.portfolio .ds-row:hover .ds-no,
+.portfolio .ds-row[aria-expanded="true"] .ds-no
+{
+    color: var(--ds-signal);
+    color: var(--ds-signal-ink);
+}
+.portfolio .ds-desig
+{
+    font-size: 19px;
+    font-weight: 600;
+    font-stretch: 92%;
+    line-height: 1.3;
+    color: var(--text-black-900);
+}
+.portfolio .ds-desig small
+{
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    font-stretch: 100%;
+    color: var(--text-black-700);
+    margin-top: 3px;
+}
+.portfolio .ds-stack
+{
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--text-black-700);
+    line-height: 1.5;
+}
+.portfolio .ds-mark
+{
+    justify-self: end;
+    width: 13px;
+    height: 13px;
+    position: relative;
+    align-self: center;
+}
+.portfolio .ds-mark::before,
+.portfolio .ds-mark::after
+{
+    content: "";
+    position: absolute;
+    background: var(--text-black-700);
+    left: 50%;
+    top: 50%;
+    transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.18s ease;
+}
+.portfolio .ds-mark::before
+{
+    width: 13px;
+    height: var(--ds-rule);
+    transform: translate(-50%, -50%);
+}
+.portfolio .ds-mark::after
+{
+    width: var(--ds-rule);
+    height: 13px;
+    transform: translate(-50%, -50%);
+}
+.portfolio .ds-row[aria-expanded="true"] .ds-mark::after
+{
+    transform: translate(-50%, -50%) scaleY(0);
+}
+.portfolio .ds-row:hover .ds-mark::before,
+.portfolio .ds-row:hover .ds-mark::after,
+.portfolio .ds-row[aria-expanded="true"] .ds-mark::before
+{
+    background: var(--ds-signal);
+}
+
+/* ---- expanded sheet ---- */
+.portfolio .ds-body
+{
+    display: none;
+}
+.portfolio .ds-sheet.is-open .ds-body
+{
+    display: block;
+}
+.portfolio .ds-body > div
+{
+    min-width: 0;
+}
+.portfolio .ds-sheet.is-open .ds-sheet-inner
+{
+    animation: ds-reveal 0.42s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes ds-reveal
+{
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: none; }
+}
+.portfolio .ds-sheet-inner
+{
+    display: grid;
+    min-width: 0;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    gap: 0;
+    border-left: var(--ds-rule) solid var(--ds-line-strong);
+    border-top: var(--ds-rule) solid var(--ds-line);
+    margin: 0 0 22px 0;
+    background: var(--ds-sheet);
+}
+.portfolio .ds-sheet[data-source="nda"] .ds-sheet-inner
+{
+    border-left-style: dashed;
+}
+
+/* drawing area */
+.portfolio .ds-draw
+{
+    min-width: 0;
+    padding: 18px;
+    border-right: var(--ds-rule) solid var(--ds-line);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.portfolio .ds-media
+{
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border: var(--ds-rule) solid var(--ds-line);
+    background: var(--bg-black-900);
+}
+.portfolio .ds-media > img,
+.portfolio .ds-media > iframe
+{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 0;
+}
+.portfolio .ds-media > img
+{
+    object-fit: cover;
+}
+.portfolio .ds-media--fit
+{
+    background-color: var(--bg-black-900);
+    background-image: repeating-linear-gradient(45deg, var(--ds-line) 0 1px, transparent 1px 7px);
+}
+.portfolio .ds-media--fit > img
+{
+    object-fit: contain;
+}
+.portfolio .ds-scrollnote
+{
+    display: none;
+    font-size: var(--ds-label);
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--text-black-700);
+}
+.portfolio .ds-caption
+{
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--text-black-700);
+}
+
+/* title block */
+.portfolio .ds-block
+{
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+.portfolio .ds-block
+{
+    justify-content: flex-end;
+}
+.portfolio .ds-block dl
+{
+    display: grid;
+    grid-template-columns: 6.5rem minmax(0, 1fr);
+    border-bottom: var(--ds-rule) solid var(--ds-line);
+    min-width: 0;
+}
+.portfolio .ds-block dl:last-of-type
+{
+    border-bottom: 0;
+}
+.portfolio .ds-block dt
+{
+    font-size: var(--ds-label);
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--text-black-700);
+    padding: 11px 12px 11px 16px;
+    border-right: var(--ds-rule) solid var(--ds-line);
+}
+.portfolio .ds-block dd
+{
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-black-900);
+    padding: 11px 16px 11px 12px;
+}
+.portfolio .ds-block dd a
+{
+    color: var(--ds-signal);
+    color: var(--ds-signal-ink);
+    border-bottom: var(--ds-rule) solid currentColor;
+    text-underline-offset: 3px;
+}
+.portfolio .ds-block dd a + a
+{
+    margin-left: 14px;
+}
+.portfolio .ds-block .ds-shows dd
+{
+    font-size: 15px;
     font-weight: 500;
 }
-.portfolio .portfolio-item
-{
-    flex: 0 0 33.33%;
-    max-width: 33.33%;
-    margin-bottom: 30px;
-}
-.portfolio .portfolio-item-inner
-{
-    border: 6px solid var(--bg-black-100);
-    border-radius: 10px;
-    overflow: hidden;
-    cursor: pointer;
-}
-.portfolio .portfolio-item-inner .portfolio-img img
+
+/* authored technical diagrams — one stroke weight throughout */
+.portfolio .ds-dwg
 {
     width: 100%;
+    max-width: 100%;
+    height: auto;
     display: block;
+    color: var(--text-black-900);
+}
+.portfolio .ds-dwg [stroke]
+{
+    stroke: currentColor;
+    stroke-width: 1.5;
+    fill: none;
+    vector-effect: non-scaling-stroke;
+}
+.portfolio .ds-dwg .dash
+{
+    stroke-dasharray: 7 5;
+}
+.portfolio .ds-dwg .sig
+{
+    stroke: var(--ds-signal);
+}
+.portfolio .ds-dwg text
+{
+    fill: currentColor;
+    stroke: none;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+.portfolio .ds-dwg .lbl
+{
+    fill: var(--text-black-700);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+}
+
+/* ---- back page: the two exits ---- */
+.portfolio .ds-close
+{
+    margin-top: 40px;
+    border: var(--ds-rule) solid var(--ds-line-strong);
+    background: var(--ds-sheet);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+.portfolio .ds-close > div
+{
+    padding: 20px 22px;
+}
+.portfolio .ds-close > div + div
+{
+    border-left: var(--ds-rule) solid var(--ds-line);
+}
+.portfolio .ds-close h3
+{
+    font-size: var(--ds-label);
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--text-black-700);
+    margin-bottom: 12px;
+}
+.portfolio .ds-close p
+{
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--text-black-900);
+    margin-bottom: 14px;
+}
+.portfolio .ds-close .btn
+{
+    margin: 0 10px 10px 0;
+    background: transparent;
+    border: var(--ds-rule) solid var(--ds-line-strong);
+    border-radius: 0;
+    padding: 11px 22px;
+    color: var(--text-black-900);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    transition: border-color 0.18s ease, color 0.18s ease;
+}
+.portfolio .ds-close .btn:hover
+{
+    background: transparent;
+    border-color: var(--ds-signal);
+    color: var(--ds-signal);
+    color: var(--ds-signal-ink);
+    box-shadow: none;
+    transform: none;
+}
+.portfolio .ds-close a:not(.btn)
+{
+    color: var(--ds-signal);
+    color: var(--ds-signal-ink);
+    border-bottom: var(--ds-rule) solid currentColor;
+    text-underline-offset: 3px;
+}
+
+@media (max-width: 991px)
+{
+    .portfolio .ds-set-grid
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .portfolio .ds-cell:nth-child(2n)
+    {
+        border-right: 0;
+    }
+    .portfolio .ds-cell:nth-child(-n+2)
+    {
+        border-bottom: var(--ds-rule) solid var(--ds-line);
+    }
+    .portfolio .ds-sheet-inner
+    {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .portfolio .ds-draw
+    {
+        border-right: 0;
+        border-bottom: var(--ds-rule) solid var(--ds-line);
+    }
+}
+@media (max-width: 767px)
+{
+    .portfolio .ds-set-grid
+    {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .portfolio .ds-cell
+    {
+        border-right: 0;
+        border-bottom: var(--ds-rule) solid var(--ds-line);
+    }
+    .portfolio .ds-cell:last-child
+    {
+        border-bottom: 0;
+    }
+    .portfolio .ds-filters
+    {
+        margin-left: 0;
+    }
+    .portfolio .ds-row
+    {
+        grid-template-columns: 2.6rem minmax(0, 1fr) 1.2rem;
+        row-gap: 7px;
+        column-gap: 14px;
+    }
+    .portfolio .ds-stack
+    {
+        grid-column: 2 / 3;
+    }
+    .portfolio .ds-mark
+    {
+        grid-row: 1 / 2;
+        grid-column: 3 / 4;
+    }
+    .portfolio .ds-band b
+    {
+        font-size: 24px;
+    }
+    .portfolio .ds-block dl
+    {
+        grid-template-columns: 5.5rem minmax(0, 1fr);
+    }
+    .portfolio .ds-dwgbox
+    {
+        overflow-x: auto;
+    }
+    .portfolio .ds-dwg
+    {
+        min-width: 520px;
+    }
+    .portfolio .ds-scrollnote
+    {
+        display: block;
+    }
+    .portfolio .ds-sheet
+    {
+        margin: 0 10px 0 0;
+    }
+    .portfolio .ds-axis
+    {
+        padding: 12px 0 12px 62px;
+    }
+    .portfolio .ds-axis::before
+    {
+        left: 46px;
+    }
+    .portfolio .ds-band
+    {
+        padding: 22px 10px 8px 0;
+    }
+    .portfolio .ds-band b
+    {
+        left: -62px;
+        width: 38px;
+        font-size: 17px;
+    }
+    .portfolio .ds-band::before
+    {
+        left: -16px;
+        width: 16px;
+    }
+    .portfolio .ds-close
+    {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .portfolio .ds-close > div + div
+    {
+        border-left: 0;
+        border-top: var(--ds-rule) solid var(--ds-line);
+    }
+}
+@media (prefers-reduced-motion: reduce)
+{
+    .portfolio .ds-mark::before,
+    .portfolio .ds-mark::after
+    {
+        transition-duration: 0.01ms;
+    }
+    .portfolio .ds-sheet.is-open .ds-sheet-inner
+    {
+        animation: none;
+    }
 }
 /* contact */
 .contact-title
