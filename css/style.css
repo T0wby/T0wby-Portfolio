@@ -362,6 +362,10 @@ h3.my-profession .profession-line
 h3.my-profession .profession-gauge
 {
     visibility: hidden;
+    /* a grid item stretches to the row by default, which would make the gauge
+       report the row height instead of its own -- and the row already contains
+       the line being typed, so the measurement would follow the animation */
+    align-self: start;
 }
 .typing
 {

@@ -1,13 +1,28 @@
 /* ============================== typing animation ============================ */
-var professionStrings = ["Software Developer","C# / .NET Developer","WPF & Blazor Developer","Game Developer"];
-/* the gauge reserves the height of the longest line so the page below does not
-   jump while typing. ponytail: longest by character count, swap in a canvas
-   measureText pass if a future string is short but wide */
+var professionStrings = ["Software Developer","C# / .NET Developer","WPF & UWP Developer","Game Developer"];
+/* the gauge reserves the tallest line so the page below does not jump while
+   typing. measured in the real element rather than guessed from string length,
+   because which string is tallest depends on the width and on Archivo having
+   swapped in -- two strings can tie on characters and differ by a whole line */
 var professionGauge = document.querySelector(".profession-gauge");
-if (professionGauge)
+function sizeProfessionGauge()
 {
-    professionGauge.textContent = "I'm a " + professionStrings.reduce((a, b) => a.length > b.length ? a : b);
+    if (!professionGauge) { return; }
+    var tallest = professionStrings[0], max = 0;
+    professionStrings.forEach(function (s)
+    {
+        professionGauge.textContent = "I'm a " + s;
+        if (professionGauge.offsetHeight > max)
+        {
+            max = professionGauge.offsetHeight;
+            tallest = s;
+        }
+    });
+    professionGauge.textContent = "I'm a " + tallest;
 }
+sizeProfessionGauge();
+window.addEventListener("resize", sizeProfessionGauge);
+if (document.fonts) { document.fonts.ready.then(sizeProfessionGauge); }
 var typed = new Typed(".typing",{
     strings:professionStrings,
     typeSpeed:100,
