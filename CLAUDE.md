@@ -35,7 +35,7 @@ Storage access is wrapped in `remember()` / `recall()` so a private-mode throw c
 ## Content conventions and gotchas
 
 - **Contact details are duplicated** between the About section's `.personal-info` and the Contact section. Change both.
-- **CV links are hardcoded filenames** (`cv/Lebenslauf_Tobias_Nuehlen_EN.pdf` / `_GER.pdf`) in the Home section. Renaming a PDF silently breaks the download button.
+- **No CV PDFs are published.** The five variants were removed from `cv/` because they carry a home address and phone number, and GitHub Pages serves that folder at a guessable URL whether or not anything links to it. The Home section now ends after its intro paragraph, and the portfolio back page links `#contact` ("Request the CV") instead. Sources stay local — `cv/source/` is gitignored and was never committed.
 - **Empty `<div class="portfolio-item padd-15">` blocks are deliberate spacers** keeping the 3-column grid aligned. They're commented as "portfolio filler" — don't delete them as dead markup.
 - **`data-section-index="1"` on the Hire Me button is the index of the section being *left*** (about = 1 in the live DOM, since `#services` is commented out), not the destination. It only feeds the `.back-section` transition.
 - **Only the active section is `visibility: visible`** — `.section` is hidden by default, so inactive sections stay out of the tab order and the accessibility tree. `visibility` (not `display`) is deliberate: the collapsed drawing sheets still need a layout box for `syncBoxes()` to measure. `.back-section` borrows a `holdBackSection` keyframe to stay on screen for the 1s slide, then falls back to hidden.

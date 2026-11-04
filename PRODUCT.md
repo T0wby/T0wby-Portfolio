@@ -70,7 +70,7 @@ Existing identity facts, not aesthetic direction:
 
 **Real, on disk:**
 
-- `cv/Lebenslauf_Tobias_Nuehlen_EN.pdf`, `_GER.pdf`, `_GER_ausfuehrlich.pdf`, `_GER_mitFoto.pdf`, `cv/Resume_Tobias_Nuehlen_US.pdf` — five CV variants, sources in `cv/source/*.docx`. Only the first two are linked from the site.
+- No CV PDFs ship with the site. The five variants were removed so the public deploy cannot serve a document carrying a home address and phone number; sources stay local in `cv/source/*.docx` (gitignored, never committed). The site asks visitors to request the CV through the contact section.
 - `images/Tobi.jpg` — portrait.
 - `images/portfolio/` — project stills.
 

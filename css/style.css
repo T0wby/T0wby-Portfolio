@@ -377,11 +377,6 @@ h3.my-profession .profession-gauge
     font-size: 20px;
     color: var(--text-black-700);
 }
-/* the two CV buttons wrap on narrow screens and need a gap when they do */
-.home-info .btn
-{
-    margin: 0 10px 15px 0;
-}
 .home .home-img
 {
     flex: 0 0 40%;
