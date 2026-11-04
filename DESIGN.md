@@ -334,7 +334,7 @@ optional 12px sub-note. Hairline dividers between cells, none after the last.
 - **Filter chips:** square 1.5px-outlined buttons, uppercase 11px, transparent fill, 5px/10px padding.
   Unpressed is Secondary Ink on a hairline border; hover raises text to Ink and border to structural;
   `aria-pressed="true"` is Signal Ink text on an accent border. Never filled.
-- **Count:** an uppercase `role="status"` line reading "N of 9 sheets", updated on every filter click.
+- **Count:** an uppercase `role="status"` line reading "N of 8 sheets", updated on every filter click.
 
 ### Register Row (`.ds-row`)
 A real `<button>`, full width, transparent, no border except a 1.5px structural **left edge** — solid

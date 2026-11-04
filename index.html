@@ -27,7 +27,7 @@
   tabular figures, title blocks as labelled cell grids, authored line diagrams at that same weight.
   Solid frame edge = source published; dashed edge = under NDA, interior only. The skin accent is
   the live signal and nothing else.
-  STORY: A hiring manager reads nine dated sheets in which professional and engine work interleave,
+  STORY: A hiring manager reads eight dated sheets in which professional and engine work interleave,
   opens two, and leaves with a CV.
   FIRST VIEWPORT: No hero. Set title block across the top with legend and stack filters, then the
   register on a year axis, the 2024-to-present band first and marked live.
@@ -62,7 +62,7 @@
           <div class="row">
             <div class="home-info padd-15">
               <h3 class="hello">Hello, my name is <span class="name">Tobias Nühlen</span></h3>
-              <h3 class="my-profession">I'm a <span class="typing">Software Developer</span></h3>
+              <h3 class="my-profession"><span class="profession-line">I'm a <span class="typing">Software Developer</span></span><span class="profession-line profession-gauge" aria-hidden="true">I'm a Software Developer</span></h3>
               <p>I'm a Software Developer with two years of professional experience building desktop applications in C# and .NET — WPF, UWP and the MVVM pattern — currently porting a grown UWP application to Blazor. I studied Games Programming and still build in Unity, Unreal and C++ on the side.</p>
               <a href="cv/Lebenslauf_Tobias_Nuehlen_EN.pdf" class="btn">Download English CV </a>
               <a href="cv/Lebenslauf_Tobias_Nuehlen_GER.pdf" class="btn">Download German CV</a>
@@ -279,7 +279,7 @@
                   </dl>
                   <dl class="ds-cell">
                     <dt>Sheets</dt>
-                    <dd>09<small>professional and engine, one register</small></dd>
+                    <dd>08<small>professional and engine, one register</small></dd>
                   </dl>
                   <dl class="ds-cell">
                     <dt>Period</dt>
@@ -298,12 +298,11 @@
                   <div class="ds-filters" role="group" aria-label="Filter sheets by stack">
                     <button type="button" class="ds-filter" data-filter="all" aria-pressed="true">All</button>
                     <button type="button" class="ds-filter" data-filter="csharp" aria-pressed="false">C# / .NET</button>
-                    <button type="button" class="ds-filter" data-filter="blazor" aria-pressed="false">Blazor</button>
                     <button type="button" class="ds-filter" data-filter="wpf" aria-pressed="false">WPF / UWP</button>
                     <button type="button" class="ds-filter" data-filter="engine" aria-pressed="false">Game engine</button>
                     <button type="button" class="ds-filter" data-filter="cpp" aria-pressed="false">C++ / Vulkan</button>
                   </div>
-                  <p class="ds-count" role="status">9 of 9 sheets</p>
+                  <p class="ds-count" role="status">8 of 8 sheets</p>
                 </div>
               </div>
 
@@ -313,68 +312,21 @@
               <ol class="ds-register">
 
                 <!-- sheet 01 -->
-                <li class="ds-sheet" data-source="nda" data-stack="csharp blazor">
+                <li class="ds-sheet" data-source="nda" data-stack="csharp wpf">
                   <button type="button" class="ds-row" aria-expanded="false" aria-controls="sheet-01">
                     <span class="ds-no">01</span>
-                    <span class="ds-desig">Porting a grown UWP application to Blazor<small>werusys Industrieinformatik &middot; 09.2024 &ndash; present <span class="ds-current">Current</span></small></span>
-                    <span class="ds-stack">C# &middot; Blazor &middot; .NET</span>
+                    <span class="ds-desig">Maintaining and extending industrial line&#8209;of&#8209;business software<small>werusys Industrieinformatik &middot; 09.2024 &ndash; present <span class="ds-current">Current</span></small></span>
+                    <span class="ds-stack">WPF &middot; UWP &middot; C# &middot; EF Core</span>
                     <span class="ds-mark" aria-hidden="true"></span>
                   </button>
                   <div class="ds-body" id="sheet-01"><div>
                     <div class="ds-sheet-inner">
                       <div class="ds-draw">
-                        <div class="ds-dwgbox" tabindex="0" role="region" aria-label="Schematic, scrolls sideways"><svg class="ds-dwg" viewBox="0 0 700 300" role="img" aria-labelledby="dwg01t dwg01d">
-                          <title id="dwg01t">Component decomposition of a UWP application into a Blazor component set</title>
-                          <desc id="dwg01d">A single grown UWP application on the left is decomposed into a shared stack of reusable components, which is then rendered by three targets of different widths: phone, tablet and desktop.</desc>
-                          <rect x="16" y="52" width="150" height="186" stroke="currentColor"/>
-                          <path d="M16 108h150M16 152h150M16 196h150M92 52v186" stroke="currentColor" class="dash"/>
-                          <text x="16" y="42" class="lbl">Grown UWP application</text>
-                          <path d="M186 145h74" stroke="currentColor" class="sig"/>
-                          <path d="M252 138l10 7-10 7" stroke="currentColor" class="sig"/>
-                          <text x="186" y="132" class="lbl">Decompose</text>
-                          <rect x="278" y="76" width="118" height="28" stroke="currentColor"/>
-                          <rect x="278" y="112" width="118" height="28" stroke="currentColor"/>
-                          <rect x="278" y="148" width="118" height="28" stroke="currentColor"/>
-                          <rect x="278" y="184" width="118" height="28" stroke="currentColor"/>
-                          <text x="278" y="66" class="lbl">Shared components</text>
-                          <path d="M416 90h44v104h-44M416 145h44" stroke="currentColor"/>
-                          <rect x="482" y="176" width="34" height="62" stroke="currentColor"/>
-                          <rect x="530" y="140" width="46" height="98" stroke="currentColor"/>
-                          <rect x="590" y="96" width="34" height="142" stroke="currentColor"/>
-                          <path d="M482 238h142" stroke="currentColor"/>
-                          <text x="482" y="166" class="lbl">Phone</text>
-                          <text x="530" y="130" class="lbl">Tablet</text>
-                          <text x="590" y="86" class="lbl">Desktop</text>
-                          <text x="482" y="262" class="lbl">One interface, three widths</text>
-                        </svg></div>
-                        <p class="ds-scrollnote">Drawing scrolls sideways</p>
-                        <p class="ds-caption">Schematic. The employer&rsquo;s product interface is not shown; this sheet documents the structure of the work, not the screen.</p>
-                      </div>
-                      <div class="ds-block">
-                        <dl class="ds-shows"><dt>Shows</dt><dd>Breaking a grown application into reusable components, and designing one interface that has to hold up on phone, tablet and desktop.</dd></dl>
-                        <dl><dt>Role</dt><dd>Owns the UI side of the port</dd></dl>
-                        <dl><dt>Period</dt><dd>09.2024 &ndash; present</dd></dl>
-                        <dl><dt>Stack</dt><dd>C#, .NET, Blazor, XAML, MVVM</dd></dl>
-                        <dl><dt>Source</dt><dd>Under NDA &mdash; architecture only</dd></dl>
-                      </div>
-                    </div>
-                  </div></div>
-                </li>
-
-                <!-- sheet 02 -->
-                <li class="ds-sheet" data-source="nda" data-stack="csharp wpf">
-                  <button type="button" class="ds-row" aria-expanded="false" aria-controls="sheet-02">
-                    <span class="ds-no">02</span>
-                    <span class="ds-desig">Interface layer of industrial line&#8209;of&#8209;business software<small>werusys Industrieinformatik &middot; 09.2024 &ndash; present <span class="ds-current">Current</span></small></span>
-                    <span class="ds-stack">WPF &middot; UWP &middot; XAML &middot; MVVM</span>
-                    <span class="ds-mark" aria-hidden="true"></span>
-                  </button>
-                  <div class="ds-body" id="sheet-02"><div>
-                    <div class="ds-sheet-inner">
-                      <div class="ds-draw">
-                        <div class="ds-dwgbox" tabindex="0" role="region" aria-label="Schematic, scrolls sideways"><svg class="ds-dwg" viewBox="0 0 640 290" role="img" aria-labelledby="dwg02t dwg02d">
-                          <title id="dwg02t">MVVM structure with data access through Entity Framework Core</title>
-                          <desc id="dwg02d">A XAML view is bound two-way to a view model, which holds the model. The model reads and writes through Entity Framework Core to a Microsoft SQL Server database.</desc>
+                        <div class="ds-dwgbox" tabindex="0" role="region" aria-label="Schematic, scrolls sideways"><svg class="ds-dwg" viewBox="0 0 640 290" role="img" aria-labelledby="dwg01t dwg01d">
+                          <title id="dwg01t">The layers this work reaches across, from XAML view down to the database</title>
+                          <desc id="dwg01d">A XAML view is bound two-way to a view model, which holds the model. The model reads and writes through Entity Framework Core to a Microsoft SQL Server database. Defect work, new features and performance work all run across these layers.</desc>
+                          <path d="M16 40v-12h608v12" stroke="currentColor"/>
+                          <text x="16" y="20" class="lbl">Bugfixing &middot; feature work &middot; performance</text>
                           <rect x="16" y="60" width="150" height="76" stroke="currentColor"/>
                           <text x="26" y="94" >View</text>
                           <text x="26" y="112" class="lbl">XAML</text>
@@ -403,8 +355,8 @@
                         <p class="ds-caption">Schematic. The employer&rsquo;s product interface is not shown; this sheet documents the structure of the work, not the screen.</p>
                       </div>
                       <div class="ds-block">
-                        <dl class="ds-shows"><dt>Shows</dt><dd>The UI layer of industrial desktop software built to hold a domain that keeps growing &mdash; and the data path underneath it.</dd></dl>
-                        <dl><dt>Role</dt><dd>Software Developer, UI</dd></dl>
+                        <dl class="ds-shows"><dt>Shows</dt><dd>Work on software that is already in production: tracking defects through a large existing codebase, fitting new features into a domain that keeps growing, and bringing slow paths back under budget &mdash; across the interface and the data layer beneath it.</dd></dl>
+                        <dl><dt>Role</dt><dd>Software Developer, UI and backend</dd></dl>
                         <dl><dt>Period</dt><dd>09.2024 &ndash; present</dd></dl>
                         <dl><dt>Stack</dt><dd>C#, .NET, WPF, UWP, XAML, MVVM, EF Core, MS SQL Server</dd></dl>
                         <dl><dt>Source</dt><dd>Under NDA &mdash; architecture only</dd></dl>
@@ -413,20 +365,20 @@
                   </div></div>
                 </li>
 
-                <!-- sheet 03 -->
+                <!-- sheet 02 -->
                 <li class="ds-sheet" data-source="nda" data-stack="csharp">
-                  <button type="button" class="ds-row" aria-expanded="false" aria-controls="sheet-03">
-                    <span class="ds-no">03</span>
+                  <button type="button" class="ds-row" aria-expanded="false" aria-controls="sheet-02">
+                    <span class="ds-no">02</span>
                     <span class="ds-desig">Cross&#8209;platform desktop application in Avalonia<small>MSA GmbH, C# traineeship &middot; 07.2024 &ndash; 08.2024</small></span>
                     <span class="ds-stack">C# &middot; Avalonia &middot; MVVM</span>
                     <span class="ds-mark" aria-hidden="true"></span>
                   </button>
-                  <div class="ds-body" id="sheet-03"><div>
+                  <div class="ds-body" id="sheet-02"><div>
                     <div class="ds-sheet-inner">
                       <div class="ds-draw">
-                        <div class="ds-dwgbox" tabindex="0" role="region" aria-label="Schematic, scrolls sideways"><svg class="ds-dwg" viewBox="0 0 640 230" role="img" aria-labelledby="dwg03t dwg03d">
-                          <title id="dwg03t">One MVVM application rendered to three desktop operating systems</title>
-                          <desc id="dwg03d">A single application built on the MVVM pattern targets Windows, macOS and Linux from one codebase.</desc>
+                        <div class="ds-dwgbox" tabindex="0" role="region" aria-label="Schematic, scrolls sideways"><svg class="ds-dwg" viewBox="0 0 640 230" role="img" aria-labelledby="dwg02t dwg02d">
+                          <title id="dwg02t">One MVVM application rendered to three desktop operating systems</title>
+                          <desc id="dwg02d">A single application built on the MVVM pattern targets Windows, macOS and Linux from one codebase.</desc>
                           <rect x="16" y="76" width="182" height="76" stroke="currentColor"/>
                           <text x="28" y="110">One codebase</text>
                           <text x="28" y="128" class="lbl">Avalonia + MVVM</text>
@@ -456,20 +408,20 @@
                   </div></div>
                 </li>
 
-                <!-- sheet 04 -->
+                <!-- sheet 03 -->
                 <li class="ds-sheet" data-source="public" data-stack="engine">
-                  <button type="button" class="ds-row" aria-expanded="false" aria-controls="sheet-04">
-                    <span class="ds-no">04</span>
+                  <button type="button" class="ds-row" aria-expanded="false" aria-controls="sheet-03">
+                    <span class="ds-no">03</span>
                     <span class="ds-desig">Mixed Reality Roguelike Shooter<small>B.Sc. thesis, SAE Institute Cologne &middot; completed 03.2024</small></span>
                     <span class="ds-stack">Oculus SDK &middot; Mixed reality</span>
                     <span class="ds-mark" aria-hidden="true"></span>
                   </button>
-                  <div class="ds-body" id="sheet-04"><div>
+                  <div class="ds-body" id="sheet-03"><div>
                     <div class="ds-sheet-inner">
                       <div class="ds-draw">
-                        <div class="ds-dwgbox" tabindex="0" role="region" aria-label="Schematic, scrolls sideways"><svg class="ds-dwg" viewBox="0 0 700 300" role="img" aria-labelledby="dwg04t dwg04d">
-                          <title id="dwg04t">How the mixed reality scene is composed</title>
-                          <desc id="dwg04d">The headset's passthrough view of the real room is combined with room geometry and virtual actors into one composited view presented to the player.</desc>
+                        <div class="ds-dwgbox" tabindex="0" role="region" aria-label="Schematic, scrolls sideways"><svg class="ds-dwg" viewBox="0 0 700 300" role="img" aria-labelledby="dwg03t dwg03d">
+                          <title id="dwg03t">How the mixed reality scene is composed</title>
+                          <desc id="dwg03d">The headset's passthrough view of the real room is combined with room geometry and virtual actors into one composited view presented to the player.</desc>
                           <rect x="16" y="70" width="170" height="110" stroke="currentColor"/>
                           <path d="M16 70l170 110M16 180l170-110" stroke="currentColor" class="dash"/>
                           <text x="16" y="60" class="lbl">Real room</text>
@@ -513,22 +465,22 @@
               </ol>
 
               <p class="ds-band"><b>2022</b><i></i></p>
-              <ol class="ds-register" start="5">
+              <ol class="ds-register" start="4">
 
-                <!-- sheet 05 -->
+                <!-- sheet 04 -->
                 <li class="ds-sheet" data-source="public" data-stack="engine">
-                  <button type="button" class="ds-row" aria-expanded="false" aria-controls="sheet-05">
-                    <span class="ds-no">05</span>
+                  <button type="button" class="ds-row" aria-expanded="false" aria-controls="sheet-04">
+                    <span class="ds-no">04</span>
                     <span class="ds-desig">Genocide for Future<small>SAE Advanced Diploma production &middot; 03.2022 &ndash; 09.2023</small></span>
                     <span class="ds-stack">Team production &middot; Real&#8209;time 3D</span>
                     <span class="ds-mark" aria-hidden="true"></span>
                   </button>
-                  <div class="ds-body" id="sheet-05"><div>
+                  <div class="ds-body" id="sheet-04"><div>
                     <div class="ds-sheet-inner">
                       <div class="ds-draw">
-                        <div class="ds-dwgbox" tabindex="0" role="region" aria-label="Schematic, scrolls sideways"><svg class="ds-dwg" viewBox="0 0 700 300" role="img" aria-labelledby="dwg05t dwg05d">
-                          <title id="dwg05t">The production workflow this project ran under, and the lane worked in</title>
-                          <desc id="dwg05d">Design, art and audio, and programming run as parallel lanes into a build, which goes to playtest and loops back into the lanes. Programming is the lane worked in.</desc>
+                        <div class="ds-dwgbox" tabindex="0" role="region" aria-label="Schematic, scrolls sideways"><svg class="ds-dwg" viewBox="0 0 700 300" role="img" aria-labelledby="dwg04t dwg04d">
+                          <title id="dwg04t">The production workflow this project ran under, and the lane worked in</title>
+                          <desc id="dwg04d">Design, art and audio, and programming run as parallel lanes into a build, which goes to playtest and loops back into the lanes. Programming is the lane worked in.</desc>
                           <rect x="16" y="40" width="188" height="44" stroke="currentColor"/>
                           <text x="30" y="68" class="lbl">Design</text>
                           <rect x="16" y="104" width="188" height="44" stroke="currentColor"/>
@@ -573,20 +525,20 @@
                   </div></div>
                 </li>
 
-                <!-- sheet 06 -->
+                <!-- sheet 05 -->
                 <li class="ds-sheet" data-source="public" data-stack="cpp">
-                  <button type="button" class="ds-row" aria-expanded="false" aria-controls="sheet-06">
-                    <span class="ds-no">06</span>
+                  <button type="button" class="ds-row" aria-expanded="false" aria-controls="sheet-05">
+                    <span class="ds-no">05</span>
                     <span class="ds-desig">Vulkan renderer<small>SAE Institute Cologne &middot; 03.2022 &ndash; 09.2023</small></span>
                     <span class="ds-stack">C++ &middot; Vulkan</span>
                     <span class="ds-mark" aria-hidden="true"></span>
                   </button>
-                  <div class="ds-body" id="sheet-06"><div>
+                  <div class="ds-body" id="sheet-05"><div>
                     <div class="ds-sheet-inner">
                       <div class="ds-draw">
-                        <div class="ds-dwgbox" tabindex="0" role="region" aria-label="Schematic, scrolls sideways"><svg class="ds-dwg" viewBox="0 0 700 300" role="img" aria-labelledby="dwg06t dwg06d">
-                          <title id="dwg06t">What an engine provides versus what Vulkan makes explicit</title>
-                          <desc id="dwg06d">Stages an engine hands you already configured are the same stages a Vulkan application has to create, describe and synchronise by hand.</desc>
+                        <div class="ds-dwgbox" tabindex="0" role="region" aria-label="Schematic, scrolls sideways"><svg class="ds-dwg" viewBox="0 0 700 300" role="img" aria-labelledby="dwg05t dwg05d">
+                          <title id="dwg05t">What an engine provides versus what Vulkan makes explicit</title>
+                          <desc id="dwg05d">Stages an engine hands you already configured are the same stages a Vulkan application has to create, describe and synchronise by hand.</desc>
                           <rect x="16" y="56" width="250" height="200" stroke="currentColor" class="dash"/>
                           <text x="16" y="46" class="lbl">Inside an engine</text>
                           <path d="M16 96h250M16 136h250M16 176h250M16 216h250" stroke="currentColor" class="dash"/>
@@ -622,15 +574,15 @@
                   </div></div>
                 </li>
 
-                <!-- sheet 07 -->
+                <!-- sheet 06 -->
                 <li class="ds-sheet" data-source="public" data-stack="engine">
-                  <button type="button" class="ds-row" aria-expanded="false" aria-controls="sheet-07">
-                    <span class="ds-no">07</span>
+                  <button type="button" class="ds-row" aria-expanded="false" aria-controls="sheet-06">
+                    <span class="ds-no">06</span>
                     <span class="ds-desig">3D simulation project<small>SAE Institute Cologne, second semester &middot; 2022</small></span>
                     <span class="ds-stack">Real&#8209;time 3D</span>
                     <span class="ds-mark" aria-hidden="true"></span>
                   </button>
-                  <div class="ds-body" id="sheet-07"><div>
+                  <div class="ds-body" id="sheet-06"><div>
                     <div class="ds-sheet-inner">
                       <div class="ds-draw">
                         <div class="ds-media">
@@ -648,15 +600,15 @@
                   </div></div>
                 </li>
 
-                <!-- sheet 08 -->
+                <!-- sheet 07 -->
                 <li class="ds-sheet" data-source="public" data-stack="engine">
-                  <button type="button" class="ds-row" aria-expanded="false" aria-controls="sheet-08">
-                    <span class="ds-no">08</span>
+                  <button type="button" class="ds-row" aria-expanded="false" aria-controls="sheet-07">
+                    <span class="ds-no">07</span>
                     <span class="ds-desig">Two game jam entries<small>Spring in Space &middot; Through Chimney to Your Home</small></span>
                     <span class="ds-stack">Fixed deadline &middot; Shipped publicly</span>
                     <span class="ds-mark" aria-hidden="true"></span>
                   </button>
-                  <div class="ds-body" id="sheet-08"><div>
+                  <div class="ds-body" id="sheet-07"><div>
                     <div class="ds-sheet-inner">
                       <div class="ds-draw">
                         <div class="ds-media">
@@ -680,15 +632,15 @@
                   </div></div>
                 </li>
 
-                <!-- sheet 09 -->
+                <!-- sheet 08 -->
                 <li class="ds-sheet" data-source="public" data-stack="engine">
-                  <button type="button" class="ds-row" aria-expanded="false" aria-controls="sheet-09">
-                    <span class="ds-no">09</span>
+                  <button type="button" class="ds-row" aria-expanded="false" aria-controls="sheet-08">
+                    <span class="ds-no">08</span>
                     <span class="ds-desig">Coursework: tower defense and 2D platformer<small>SAE Institute Cologne &middot; 2022</small></span>
                     <span class="ds-stack">Programming fundamentals</span>
                     <span class="ds-mark" aria-hidden="true"></span>
                   </button>
-                  <div class="ds-body" id="sheet-09"><div>
+                  <div class="ds-body" id="sheet-08"><div>
                     <div class="ds-sheet-inner">
                       <div class="ds-draw">
                         <div class="ds-media">

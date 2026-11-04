@@ -350,6 +350,18 @@ h3.my-profession
 {
     font-size: 30px;
     margin: 15px 0;
+    /* the typed line and a hidden gauge holding the longest string share one
+       grid cell, so the heading keeps the tallest height and nothing below it
+       jumps when the animation wraps to a second line */
+    display: grid;
+}
+h3.my-profession .profession-line
+{
+    grid-area: 1 / 1;
+}
+h3.my-profession .profession-gauge
+{
+    visibility: hidden;
 }
 .typing
 {

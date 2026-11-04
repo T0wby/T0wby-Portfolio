@@ -1,6 +1,15 @@
 /* ============================== typing animation ============================ */
+var professionStrings = ["Software Developer","C# / .NET Developer","WPF & Blazor Developer","Game Developer"];
+/* the gauge reserves the height of the longest line so the page below does not
+   jump while typing. ponytail: longest by character count, swap in a canvas
+   measureText pass if a future string is short but wide */
+var professionGauge = document.querySelector(".profession-gauge");
+if (professionGauge)
+{
+    professionGauge.textContent = "I'm a " + professionStrings.reduce((a, b) => a.length > b.length ? a : b);
+}
 var typed = new Typed(".typing",{
-    strings:["Software Developer","C# / .NET Developer","WPF & Blazor Developer","Game Developer"],
+    strings:professionStrings,
     typeSpeed:100,
     backSpeed:60,
     loop:true
