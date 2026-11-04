@@ -22,11 +22,11 @@ Deployment is GitHub Pages, legacy build from `main` at repo root — pushing to
 
 Adding a section means: a `<section class="... section" id="x">` block, a matching `<li><a href="#x">` in `.nav`, and section-specific CSS. `script.js` wires it up automatically from those two lists (`allSection` / `navList`) — but note the two are index-matched, so their order must stay in sync.
 
-**Theming is two independent switches**, both in `js/style-switcher.js`:
+**Theming is two independent switches**, both in `js/style-switcher.js`, each persisted to `localStorage` (`skin` / `theme`) and reapplied on load:
 - *Accent color* — `css/skins/color-1..5.css` each set only `--skin-color`. All five are `<link ... disabled>`; `setActiveStyle(name)` enables one by matching the link's `title` attribute. `index.html` also loads `color-1.css` unconditionally as the default.
 - *Dark mode* — toggles `.dark` on `<body>`; `css/style.css` redefines the `--bg-black-*` / `--text-black-*` vars under `body.dark`.
 
-Neither choice persists — a reload resets to light + color-1.
+Storage access is wrapped in `remember()` / `recall()` so a private-mode throw can't take the switcher down with it.
 
 **Layout is a hand-rolled flexbox grid**, not Bootstrap despite the naming: `.row` (flex-wrap, `-15px` side margins) wraps children carrying `.padd-15` (15px side padding), and each child gets an explicit `flex: 0 0 <pct>` in `style.css`. Breakpoints: 1199px (aside collapses to a hamburger, `.open` toggles on aside *and every section*), 991px, 767px.
 
@@ -38,6 +38,6 @@ Neither choice persists — a reload resets to light + color-1.
 - **CV links are hardcoded filenames** (`cv/Lebenslauf_Tobias_Nuehlen_EN.pdf` / `_GER.pdf`) in the Home section. Renaming a PDF silently breaks the download button.
 - **Empty `<div class="portfolio-item padd-15">` blocks are deliberate spacers** keeping the 3-column grid aligned. They're commented as "portfolio filler" — don't delete them as dead markup.
 - **`data-section-index="1"` on the Hire Me button is the index of the section being *left*** (about = 1 in the live DOM, since `#services` is commented out), not the destination. It only feeds the `.back-section` transition.
-- **The inline `<script>` at the end of the portfolio section is dead** — it sets volume on `.custom-video` elements, which no longer exist since the local video embeds were replaced with YouTube iframes.
-- `js/script.js` passes `BackSpeed` to Typed.js; the real option is `backSpeed`, so backspace speed is currently the library default.
+- **Only the active section is `visibility: visible`** — `.section` is hidden by default, so inactive sections stay out of the tab order and the accessibility tree. `visibility` (not `display`) is deliberate: the collapsed drawing sheets still need a layout box for `syncBoxes()` to measure. `.back-section` borrows a `holdBackSection` keyframe to stay on screen for the 1s slide, then falls back to hidden.
+- **Brand icons need `fab`, not `fa`** — Font Awesome 5 aliases `fa` to `fas` (solid), so `fa fa-github` silently renders nothing.
 - `.gitattributes` routes `*.mp4` through Git LFS (leftover from when portfolio videos were committed directly).

@@ -61,18 +61,27 @@ ul
     right: 0;
     bottom: 0;
     z-index: 0;
+    visibility: hidden;
     overflow-y: auto;
     overflow-x: hidden;
     transition: all 0.3s ease;
 }
+/* the outgoing section only has to stay on screen while the new one slides in */
 .section.back-section
 {
     z-index: 1;
+    animation: holdBackSection 1s ease;
+}
+@keyframes holdBackSection
+{
+    0%, 99% { visibility: visible; }
+    100% { visibility: hidden; }
 }
 .section.active
 {
     z-index: 2;
     opacity: 1;
+    visibility: visible;
     animation: slideSection 1s ease;
 }
 @keyframes slideSection
@@ -352,6 +361,11 @@ h3.my-profession
     font-size: 20px;
     color: var(--text-black-700);
 }
+/* the two CV buttons wrap on narrow screens and need a gap when they do */
+.home-info .btn
+{
+    margin: 0 10px 15px 0;
+}
 .home .home-img
 {
     flex: 0 0 40%;
@@ -572,15 +586,12 @@ h3.my-profession
     font-weight: 700;
     font-size: 18px;
     margin-bottom: 15px;
-    text-transform: capitalize;
     color: var(--text-black-900);
 }
 .about .about-content .timeline .timeline-text
 {
     line-height: 25px;
     font-size: 16px;
-    text-align: justify;
-    hyphens: auto;
     color: var(--text-black-700);
 }
 /* service */
@@ -1393,8 +1404,8 @@ body.dark .portfolio
 }
 .contact .contact-info-item
 {
-    flex: 0 0 25%;
-    max-width: 25%;
+    flex: 0 0 20%;
+    max-width: 20%;
     text-align: center;
     margin-bottom: 60px;
 }
@@ -1402,7 +1413,7 @@ body.dark .portfolio
 {
     display: inline-block;
 }
-.contact .contact-info-item .icon .fa
+.contact .contact-info-item .icon i
 {
     font-size: 25px;
     color: var(--skin-color);
@@ -1421,6 +1432,20 @@ body.dark .portfolio
     line-height: 25px;
     color: var(--text-black-700);
     font-weight: 400;
+    overflow-wrap: anywhere;
+}
+.contact .contact-info-item p a
+{
+    color: var(--text-black-700);
+    text-decoration: none;
+    border-bottom: 1px solid var(--bg-black-50);
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+.contact .contact-info-item p a:hover,
+.contact .contact-info-item p a:focus-visible
+{
+    color: var(--skin-color);
+    border-color: var(--skin-color);
 }
 .contact .contact-form
 {
@@ -1517,6 +1542,11 @@ body.dark .portfolio
         flex: 0 0 100%;
         max-width: 100%;
     }
+    /* keep the greeting clear of the fixed theme icons in the top right corner */
+    .home h3.hello
+    {
+        padding-right: 60px;
+    }
     .home .home-img
     {
         display: none;
@@ -1535,5 +1565,14 @@ body.dark .portfolio
     {
         flex: 0 0 100%;
         max-width: 100%;
+    }
+}
+@media (max-width:575px)
+{
+    /* on a phone, pushing the page over by the 270px drawer leaves a sliver
+       of content; the aside already sits above the sections, so let it overlay */
+    .section.open
+    {
+        left: 0;
     }
 }

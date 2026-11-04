@@ -1,8 +1,8 @@
 /* ============================== typing animation ============================ */
 var typed = new Typed(".typing",{
-    strings:["","Software Developer","C# / .NET Developer","WPF & Blazor Developer","Game Developer"],
+    strings:["Software Developer","C# / .NET Developer","WPF & Blazor Developer","Game Developer"],
     typeSpeed:100,
-    BackSpeed:60,
+    backSpeed:60,
     loop:true
 })
 /* ============================== Aside ============================ */
